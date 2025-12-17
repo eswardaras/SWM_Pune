@@ -1,0 +1,891 @@
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/e8c1c6e963.js"
+            crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+          rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#sidebarCollapse").on("click", function () {
+                $("#sidebar").toggleClass("active");
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="left-container">
+            <div class="logo">
+                <img src="Images/pmc_logo.png" alt="Logo" />
+            </div>
+            <span>ISWM</span>
+            <span id="sidebarCollapse" class="toggle-button"><i class="fa-solid fa-bars"></i></span>
+        </div>
+
+        <div class="wrapper-container">
+            <div class="right-container">
+                <div class="navlist-wrapper">
+                    <ul>
+                        <li class="special-waste"><a href="">Special-Waste</a></li>
+                        <li class="cd-waste"><a href="">C&D-Waste</a></li>
+                        <li class="feeder-delay">
+                            <a href="">Feeder-Delay</a><span><i class="bx bxs-bell"></i></span>
+                        </li>
+                        <li class="message">
+                            <span><i class="bx bxs-envelope"></i></span>
+                        </li>
+                        <li class="puneiswm">
+                            <span><i class="bx bx-child"></i></span>
+                            <a href="#">PUNEISWM</a>
+                            <span><i class="fa-solid fa-caret-down"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="sidebar" class="sidebar active">
+        <ul>
+            <li>
+                <span class="parent-li-wrapper">
+                    <div class="li-icon">
+                        <i class="bx bxs-send"></i>
+                        <a href="#">Fleet Management</a>
+                    </div>
+                    <i class="fas fa-chevron-left chevron"></i>
+                </span>
+                <ul class="nested">
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-bar-chart-square"></i>
+                                <a href="#">Master Dashboard</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-bar-chart-square"></i>
+                                <a href="#">Live Analysis</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-bar-chart-square"></i>
+                                <a href="#">Vehicle Dashboard</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-send"></i>
+                                <a href="#">Live Tracking</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <a href="#">Vehicle History Map</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-bar-chart-square"></i>
+                                <a href="#">Vehicle Map With Route & Feeder</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-list-ul"></i>
+                                <a href="#">Feeder Summary Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-list-ul"></i>
+                                <a href="#">Feeder Coverage Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-list-ul"></i>
+                                <a href="#">Daily Waste Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-list-ul"></i>
+                                <a href="#">Performance Reports</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-list-ul"></i>
+                                <a href="#">Group Reports</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-list-ul"></i>
+                                <a href="#">BreakDown Reports</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-list-ul"></i>
+                                <a href="#">Mech.Sweeper Coverage Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-list-ul"></i>
+                                <a href="#">Jatayu Report</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="parent-li-wrapper">
+                    <span class="li-icon">
+                        <i class="bx bx-desktop"></i>
+                        <a href="#">Street Sweeping Module</a>
+                    </span>
+                    <i class="fas fa-chevron-left chevron"></i>
+                </div>
+                <ul class="nested">
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-tachometer"></i>
+                                <a href="#">Sweeper Dashboard</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-tachometer"></i>
+                                <a href="#">Sweeper Attendance</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-tachometer"></i>
+                                <a href="#">Sweeper Attendance Summary</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-tachometer"></i>
+                                <a href="#">Sweeper History Map</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-tachometer"></i>
+                                <a href="#">Sweeper Route Coverage Report</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="parent-li-wrapper">
+                    <div class="li-icon">
+                        <i class="bx bx-desktop"></i>
+                        <a href="#">H H Commercial Waste</a>
+                    </div>
+                    <i class="fas fa-chevron-left chevron"></i>
+                </div>
+                <ul class="nested">
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-tachometer"></i>
+                                <a href="#">Collection Worker Dashboard</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-tachometer"></i>
+                                <a href="#">Collection Worker Attendance</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-tachometer"></i>
+                                <a href="#">Collection Worker Coverage Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-tachometer"></i>
+                                <a href="#">C.W. Pocket Coverage Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-tachometer"></i>
+                                <a href="#">C.W. Pocket Map</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="parent-li-wrapper">
+                    <div class="li-icon">
+                        <i class="bx bx-desktop"></i>
+                        <a href="#">Ramp and Processing</a>
+                    </div>
+                    <i class="fas fa-chevron-left chevron"></i>
+                </div>
+                <ul class="nested">
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Ramp Dashboard</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Date Wise Weight Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Vehicle Wise Weight Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Plant Wise Trip Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Prabhag Wise Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Ramp Wise Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Vehicle Type Wise Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Vehicle Wise Trips Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Byproducts Generation And Sales</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="parent-li-wrapper">
+                    <div class="li-icon">
+                        <i class="fa-solid fa-earth-asia"></i>
+                        <a href="#">Specialized Waste</a>
+                    </div>
+                    <i class="fas fa-chevron-left chevron"></i>
+                </div>
+                <ul class="nested">
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-sharp fa-solid fa-plus"></i>
+                                <a href="#">Ad-hoc Form (Specialized Waste)</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-sharp fa-solid fa-plus"></i>
+                                <a href="#">Ad-hoc Request Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-list-ul"></i>
+                                <a href="#">Trip Report</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="parent-li-wrapper">
+                    <div class="li-icon">
+                        <i class="fa-solid fa-earth-asia"></i>
+                        <a href="#">C & D Waste</a>
+                    </div>
+                    <i class="fas fa-chevron-left chevron"></i>
+                </div>
+                <ul class="nested">
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-sharp fa-solid fa-plus"></i>
+                                <a href="#">Ad-hoc Form (C & D Waste)</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-sharp fa-solid fa-plus"></i>
+                                <a href="#">Ad-hoc Request Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-list-ul"></i>
+                                <a href="#">Trip Report</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="parent-li-wrapper">
+                    <div class="li-icon">
+                        <i class="bx bx-desktop"></i>
+                        <a href="#">CT / PT Urinals</a>
+                    </div>
+                    <i class="fas fa-chevron-left chevron"></i>
+                </div>
+                <ul class="nested">
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">CT PT Dashboard</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-solid fa-truck"></i>
+                                <a href="#">CT PT GIS Map</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-solid fa-truck"></i>
+                                <a href="#">Jetting Machine Trip Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-solid fa-truck"></i>
+                                <a href="#">Daily Checkin Report</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-solid fa-truck"></i>
+                                <a href="#">CT PT Info</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="parent-li-wrapper">
+                    <div class="li-icon">
+                        <i class="bx bx-desktop"></i>
+                        <a href="#">Litter Bin</a>
+                    </div>
+                    <i class="fas fa-chevron-left chevron"></i>
+                </div>
+                <ul class="nested">
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-solid fa-truck"></i>
+                                <a href="#">Litter bin gis map</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="parent-li-wrapper">
+                    <div class="li-icon">
+                        <i class="bx bx-desktop"></i>
+                        <a href="#">Campaign Management</a>
+                    </div>
+                    <i class="fas fa-chevron-left chevron"></i>
+                </div>
+                <ul class="nested">
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-sharp fa-solid fa-plus"></i>
+                                <a href="#">Create Campaign</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="parent-li-wrapper">
+                    <div class="li-icon">
+                        <i class="bx bx-desktop"></i>
+                        <a href="#">Fine Management</a>
+                    </div>
+                    <i class="fas fa-chevron-left chevron"></i>
+                </div>
+                <ul class="nested">
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-list-ul"></i>
+                                <a href="#">Fine Management Report</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="parent-li-wrapper">
+                    <div class="li-icon">
+                        <i class="bx bxs-user"></i>
+                        <a href="#">Complain Management</a>
+                    </div>
+                    <i class="fas fa-chevron-left chevron"></i>
+                </div>
+                <ul class="nested">
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-sharp fa-solid fa-list-dropdown"></i>
+                                <a href="#">Add Camplaint</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-fast-forward"></i>
+                                <a href="#">Assign Camplaint</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-duotone fa-list-dropdown"></i>
+                                <a href="#">Register Camplaint</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-fast-forward"></i>
+                                <a href="#">View Calling Complaints</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="parent-li-wrapper">
+                    <div class="li-icon">
+                        <i class='bx bx-time bx-rotate-270'></i>
+                        <a href="#">Shift Management</a>
+                    </div>
+                    <i class="fas fa-chevron-left chevron"></i>
+                </div>
+                <ul class="nested">
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-sharp fa-solid fa-plus"></i>
+                                <a href="#">Add Shift/s</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-solid fa-turn-down-left"></i>
+                                <a href="#">Assign Shift To Vehicle/s</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="parent-li-wrapper">
+                    <div class="li-icon">
+                        <i class="fa-solid fa-earth-asia"></i>
+                        <a href="#">Geofence Management</a>
+                    </div>
+                    <i class="fas fa-chevron-left chevron"></i>
+                </div>
+                <ul class="nested">
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-sharp fa-solid fa-plus"></i>
+                                <a href="#">Add Shift/s</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-solid fa-turn-down-left"></i>
+                                <a href="#">Assign Shift To Vehicle/s</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="parent-li-wrapper">
+                    <div class="li-icon">
+                        <i class="bx bx-desktop"></i>
+                        <a href="#">Operarion Management</a>
+                    </div>
+                    <i class="fas fa-chevron-left chevron"></i>
+                </div>
+                <ul class="nested">
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Register New Device</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Edit Device Info</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Router and Feeder Creation</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Add Type Of End Processing Unit</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Add Type of Waste</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-solid fa-truck"></i>
+                                <a href="#">Add Vehicle Information</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-solid fa-truck"></i>
+                                <a href="#">View Vehicle Zone-Ward-Route</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-solid fa-truck"></i>
+                                <a href="#">Edit Vehicle Information</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Add Zone/Ward</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-fast-forward"></i>
+                                <a href="#">Assign Zone-Ward To Vehicle</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-sharp fa-solid fa-road"></i>
+                                <a href="#">Add Route</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-solid fa-truck"></i>
+                                <a href="#">Assign Route</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bx-bar-chart-square"></i>
+                                <a href="#">Add Polygon</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <a href="#">Create Feeder Point</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Add GIS Type Data</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-sharp fa-solid fa-road"></i>
+                                <a href="#">Add GIS Geofence</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="fa-sharp fa-solid fa-road"></i>
+                                <a href="#">Account Data Frame Report</a>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div class="parent-li-wrapper">
+                    <div class="li-icon">
+                        <i class="bx bxs-user"></i>
+                        <a href="#">Employee Management</a>
+                    </div>
+                    <i class="fas fa-chevron-left chevron"></i>
+                </div>
+                <ul class="nested">
+                    <li>
+                        <div class="sub-li-wrapper">
+                            <span class="li-icon">
+                                <i class="bx bxs-user"></i>
+                                <a href="#">Add Employee</a>
+                            </span>
+                        </div>
+                    </li>
+                    <div class="sub-li-wrapper">
+                        <span class="li-icon">
+                            <i class="fa-solid fa-turn-down-left"></i>
+                            <a href="#">Assign Employee Relation</a>
+                        </span>
+                    </div>
+            </li>
+            <div class="sub-li-wrapper">
+                <span class="li-icon">
+                    <i class="bx bxs-user"></i>
+                    <a href="#">Employee Login Restriction</a>
+                </span>
+            </div>
+            </li>
+            <div class="sub-li-wrapper">
+                <span class="li-icon">
+                    <i class="bx bxs-user"></i>
+                    <a href="#">Assign Employee Zone-Ward, Vehicle </a>
+                </span>
+            </div>
+            </li>
+        </ul>
+        </li>
+        <li>
+            <div class="parent-li-wrapper">
+                <div class="li-icon">
+                    <i class="bx bx-bar-chart-square"></i>
+                    <a href="#">Setting</a>
+                </div>
+                <i class="fas fa-chevron-left chevron"></i>
+            </div>
+            <ul class="nested">
+        </li>
+        <div class="sub-li-wrapper">
+            <span class="li-icon">
+                <i class='bx bxs-edit'></i>
+                <a href="#">SMS</a>
+            </span>
+        </div>
+        </li>
+        </li>
+        <div class="sub-li-wrapper">
+            <span class="li-icon">
+                <i class="fa-solid fa-comments"></i>
+                <a href="#">Notification </a>
+            </span>
+        </div>
+        </li>
+        </li>
+        <div class="sub-li-wrapper">
+            <span class="li-icon">
+                <i class="bx bxs-user"></i>
+                <a href="#">Template </a>
+            </span>
+        </div>
+        </li>
+        </ul>
+        </li>
+        <!-- Add more li elements here -->
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1>Welcome to my website</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
+        </p>
+    </div>
+</body>
+<script>
+    const li_expand = document.querySelectorAll(".parent-li-wrapper");
+    const nested_li = document.querySelectorAll(".sidebar li a");
+
+    li_expand.forEach((li_expand) => {
+        li_expand.addEventListener("click", (e) => {
+            li_expand.classList.toggle("active");
+        });
+    });
+
+    links.forEach((link) => {
+        link.addEventListener("click", (e) => {
+            const parent = e.target.parentElement;
+            parent.classList.toggle("active");
+        });
+    });
+</script>
+</html>

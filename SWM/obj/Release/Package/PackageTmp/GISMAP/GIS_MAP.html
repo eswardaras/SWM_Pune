@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lan="en">
+  <head>
+    <meta charset="urf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIS MAP</title>
+    <script
+      src="https://kit.fontawesome.com/e8c1c6e963.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="icon.css" />
+    <link rel="stylesheet" href="static/css/sweeperAttendance.css" />
+
+    <style>
+      #list {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 10px;
+      }
+
+      .list-item {
+        cursor: pointer;
+      }
+
+      .list-item:hover {
+        background-color: #eee;
+      }
+
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+
+      .map__container {
+        height: 80vh;
+      }
+
+      .highlighted {
+        background-color: yellow;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+  </head>
+
+  <body>
+    <section class="filters-section vh-100 p-2">
+      <div class="filters-container map-filters">
+        <div class="d-flex justify-content-between align-items-center p-2">
+          <h3>GIS Map</h3>
+        </div>
+      </div>
+      <div class="container-fluid" style="height: calc(100vh - 100px)">
+        <div class="row h-100">
+          <div class="col-sm px-0 map__container mt-2 order-2 order-md-1">
+            <div id="map" class="border"></div>
+          </div>
+          <div class="col-sm-auto mt-2 order-1 order-md-2">
+            <div
+              class="d-flex justify-content-between border p-2"
+              style="min-width: 220px"
+            >
+              <h3>All Ward</h3>
+              <i class="fa fa-chevron-down toggler__btn"></i>
+            </div>
+            <ul class="list-group list rounded-0 toggler__content">
+              <li
+                class="list-group-item list-item border-top-0"
+                data-layer="NagarRoadWadgaonsheri"
+              >
+                NagarRoadWadgaonsheri
+              </li>
+              <li
+                class="list-group-item list-item"
+                data-layer="YerwadaKalasDhanori"
+              >
+                YerwadaKalasDhanori
+              </li>
+              <li class="list-group-item list-item" data-layer="DholePatil">
+                DholePatil
+              </li>
+              <li class="list-group-item list-item" data-layer="AundhBaner">
+                AundhBaner
+              </li>
+              <li
+                class="list-group-item list-item"
+                data-layer="ShivajinagarGholeRoad"
+              >
+                ShivajinagarGholeRoad
+              </li>
+              <li class="list-group-item list-item" data-layer="KothrudBawdhan">
+                KothrudBawdhan
+              </li>
+              <li
+                class="list-group-item list-item"
+                data-layer="DhankawadiSahakarnagar"
+              >
+                DhankawadiSahakarnagar
+              </li>
+              <li class="list-group-item list-item" data-layer="SinhagadRoad">
+                SinhagadRoad
+              </li>
+              <li
+                class="list-group-item list-item"
+                data-layer="WarjeKarvenagar"
+              >
+                WarjeKarvenagar
+              </li>
+              <li
+                class="list-group-item list-item"
+                data-layer="HadapsarMundhawa"
+              >
+                HadapsarMundhawa
+              </li>
+              <li
+                class="list-group-item list-item"
+                data-layer="WanawadiRamtekdi"
+              >
+                WanawadiRamtekdi
+              </li>
+              <li
+                class="list-group-item list-item"
+                data-layer="KondhwaYewalewadi"
+              >
+                KondhwaYewalewadi
+              </li>
+              <li
+                class="list-group-item list-item"
+                data-layer="KasbaVishrambagwada"
+              >
+                KasbaVishrambagwada
+              </li>
+              <li class="list-group-item list-item" data-layer="BhawaniPeth">
+                BhawaniPeth
+              </li>
+              <li class="list-group-item list-item" data-layer="Bibwewadi">
+                Bibwewadi
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function () {
+    function collapseContent(button, content) {
+      $(button).click(function () {
+        $(content).slideToggle("fast");
+      });
+    }
+
+    collapseContent(".toggler__btn", ".toggler__content");
+  });
+</script>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+  crossorigin="anonymous"
+></script>
+
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""
+></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<script src="data/Bibwewadi_1.js"></script>
+<script src="data/Bhawani_Peth_2.js"></script>
+<script src="data/KasbaVishrambagwada_3.js"></script>
+<script src="data/HadapsarMundhawa_4.js"></script>
+<script src="data/WanawadiRamtekdi_5.js"></script>
+<script src="data/KondhwaYewalewadi_6.js"></script>
+<script src="data/DhankawadiSahakarnagar_7.js"></script>
+<script src="data/Sinhagad_Road_8.js"></script>
+<script src="data/WarjeKarvenagar_9.js"></script>
+<script src="data/KothrudBawdhan_10.js"></script>
+<script src="data/ShivajinagarGhole_Road_11.js"></script>
+<script src="data/AundhBaner_12.js"></script>
+<script src="data/Dhole_Patil_13.js"></script>
+<script src="data/YerwadaKalasDhanori_14.js"></script>
+<script src="data/NagarRoadWadgaonsheri_15.js"></script>
+<script src="data/KOTHI_BUFFER_1_16.js"></script>
+<script src="data/Feeder_17.js"></script>
+<script src="data/CT_18.js"></script>
+<script src="data/PT_19.js"></script>
+<script src="data/URINALS_20.js"></script>
+<script src="data/ward_poly_13.js"></script>
+<script src="data/cwpockets.js"></script>
+<script src="data/kothi_0.js"></script>
+<script src="data/Sweeper_Route_Line_buffercopy_14.js"></script>
+
+<script>
+  var map = L.map("map").setView([18.5260137, 73.865075], 12);
+
+  var osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  });
+  osm.addTo(map);
+  var bm = {
+    osm: osm,
+  };
+
+  // Define custom icons
+  var CTIcon = L.icon({
+    iconUrl: "markers/CT.png",
+    iconSize: [32, 32], // Adjust the size as needed
+  });
+
+  var PTIcon = L.icon({
+    iconUrl: "markers/PT.png",
+    iconSize: [32, 32],
+  });
+
+  var URINALSIcon = L.icon({
+    iconUrl: "markers/Ur.png",
+    iconSize: [32, 32],
+  });
+
+  var FeederIcon = L.icon({
+    iconUrl: "markers/Feeder.png",
+    iconSize: [25, 25],
+  });
+
+  var KothiIcon = L.icon({
+    iconUrl: "markers/gf.png",
+    iconSize: [25, 25],
+  });
+
+  // Create GeoJSON layers
+  var CT = L.geoJSON(CT_18JSON, {
+    pointToLayer: function (feature, latlng) {
+      return L.marker(latlng, { icon: CTIcon });
+    },
+  }).addTo(map);
+
+  CT.on("click", function (e) {
+    var properties = e.layer.feature.properties;
+    var popupContent =
+      "<b>Zone:</b> " +
+      properties.zonename +
+      "<br>" +
+      "<b>Ward:</b> " +
+      properties.wardName +
+      "<br>" +
+      "<b>Block Type:</b> " +
+      properties.blocktypen +
+      "<br>" +
+      "<b>Block Name:</b> " +
+      properties.BlockNam_1 +
+      "<br>" +
+      "<b>Mukadam:</b> " +
+      properties.Mokadam +
+      "<br>" +
+      "<b>No. of Seats:</b> " +
+      properties.NoOfSeats +
+      "<br>" +
+      "<b>Address:</b> " +
+      properties.Address;
+
+    L.popup().setLatLng(e.latlng).setContent(popupContent).openOn(map);
+  });
+
+  var PT = L.geoJSON(PT_19JSON, {
+    pointToLayer: function (feature, latlng) {
+      return L.marker(latlng, { icon: PTIcon });
+    },
+  }).addTo(map);
+
+  PT.on("click", function (e) {
+    var properties = e.layer.feature.properties;
+    var popupContent =
+      "<b>Zone:</b> " +
+      properties.zonename +
+      "<br>" +
+      "<b>Ward:</b> " +
+      properties.wardName +
+      "<br>" +
+      "<b>Block Type:</b> " +
+      properties.blocktypen +
+      "<br>" +
+      "<b>Block Name:</b> " +
+      properties.BlockNam_1 +
+      "<br>" +
+      "<b>Mukadam:</b> " +
+      properties.Mokadam +
+      "<br>" +
+      "<b>No. of Seats:</b> " +
+      properties.NoOfSeats +
+      "<br>" +
+      "<b>Address:</b> " +
+      properties.Address;
+
+    L.popup().setLatLng(e.latlng).setContent(popupContent).openOn(map);
+  });
+
+  var UR = L.geoJSON(URINALS_20JSON, {
+    pointToLayer: function (feature, latlng) {
+      return L.marker(latlng, { icon: URINALSIcon });
+    },
+  }).addTo(map);
+
+  UR.on("click", function (e) {
+    var properties = e.layer.feature.properties;
+    var popupContent =
+      "<b>Zone:</b> " +
+      properties.zonename +
+      "<br>" +
+      "<b>Ward:</b> " +
+      properties.wardName +
+      "<br>" +
+      "<b>Block Type:</b> " +
+      properties.blocktypen +
+      "<br>" +
+      "<b>Block Name:</b> " +
+      properties.BlockNam_1 +
+      "<br>" +
+      "<b>Mukadam:</b> " +
+      properties.Mokadam +
+      "<br>" +
+      "<b>No. of Seats:</b> " +
+      properties.NoOfSeats +
+      "<br>" +
+      "<b>Address:</b> " +
+      properties.Address;
+
+    L.popup().setLatLng(e.latlng).setContent(popupContent).openOn(map);
+  });
+
+  var FD = L.geoJSON(Feeder_17JSON, {
+    pointToLayer: function (feature, latlng) {
+      return L.marker(latlng, { icon: FeederIcon }).bindPopup(
+        "<b>Feeder Name:</b> " + feature.properties.feedername
+      );
+    },
+  }).addTo(map);
+
+  var KO = L.geoJSON(kothiJSON, {
+    pointToLayer: function (feature, latlng) {
+      return L.marker(latlng, { icon: KothiIcon }).bindPopup(
+        "<b>Kothi Name:</b> " + feature.properties.Kothiname
+      );
+    },
+  }).addTo(map);
+
+  // var KO = L.geoJSON(KOTHI_BUFFER_1_16JSON, {
+  //   style: function(feature) {
+  //     return {
+  //       color: 'red',
+  //       fillOpacity: 0.5
+  //     };
+  //   }
+  // }).addTo(map);
+
+  // KO.on('click', function (e) {
+  //   var properties = e.layer.feature.properties;
+  //   var popupContent = '<b>Kothi Name:</b> ' + properties.Kothiname;
+
+  //   L.popup()
+  //     .setLatLng(e.latlng)
+  //     .setContent(popupContent)
+  //     .openOn(map);
+  // });
+
+  var cw = L.geoJSON(cwJSON, {
+    style: function (feature) {
+      return {
+        fillColor: "blue",
+        fillOpacity: 0.1,
+        weight: 1,
+        color: "blue",
+        opacity: 0.4,
+      };
+    },
+    onEachFeature: function (feature, layer) {
+      if (feature.properties && feature.properties.Pocket_Nam) {
+        layer.bindPopup(
+          "<b>Cw Pocket Name:</b> " + feature.properties.Pocket_Nam
+        );
+      }
+    },
+  }).addTo(map);
+
+  // Create the GeoJSON layer with the 'onEachFeature' option.
+  var Sweeper_Route = L.geoJSON(Sweeper_Route_Line_buffercopy_14JSON, {
+    style: function (feature) {
+      return {
+        fillColor: "GREEN",
+        fillOpacity: 0.3,
+        weight: 1,
+        color: "GREEN",
+        opacity: 0.7,
+      };
+    },
+    onEachFeature: function (feature, layer) {
+      if (feature.properties && feature.properties.SweeperNam) {
+        layer.bindPopup(
+          "<b>Sweeper Name:</b> " + feature.properties.SweeperNam
+        );
+      }
+    },
+  }).addTo(map);
+
+  var overlays = {
+    "CT ": CT,
+    "PT ": PT,
+    Urinars: UR,
+    "KOTHI ": KO,
+    "FEEDER ": FD,
+    "Sweeper Route": Sweeper_Route,
+    "CW Pockets": cw,
+  };
+
+  L.control.layers(bm, overlays, { collapsed: false }).addTo(map);
+
+  var geoJSONLayers = {
+    NagarRoadWadgaonsheri: L.geoJSON(NagarRoadWadgaonsheri_15JSON, {
+      style: { fillOpacity: 0.2, weight: 2 },
+    }),
+    YerwadaKalasDhanori: L.geoJSON(YerwadaKalasDhanori_14JSON, {
+      style: { fillOpacity: 0.2, weight: 2 },
+    }),
+    DholePatil: L.geoJSON(Dhole_Patil_13JSON, {
+      style: { fillOpacity: 0.2, weight: 2 },
+    }),
+
+    AundhBaner: L.geoJSON(AundhBaner_12JSON, {
+      style: { fillOpacity: 0.2, weight: 2 },
+    }),
+    ShivajinagarGholeRoad: L.geoJSON(ShivajinagarGhole_Road_11JSON, {
+      style: { fillOpacity: 0.2, weight: 2 },
+    }),
+    KothrudBawdhan: L.geoJSON(KothrudBawdhan_10JSON, {
+      style: { fillOpacity: 0.2, weight: 2 },
+    }),
+
+    DhankawadiSahakarnagar: L.geoJSON(DhankawadiSahakarnagar_7JSON, {
+      style: { fillOpacity: 0.2, weight: 2 },
+    }),
+    SinhagadRoad: L.geoJSON(Sinhagad_Road_8JSON, {
+      style: { fillOpacity: 0.2, weight: 2 },
+    }),
+    WarjeKarvenagar: L.geoJSON(WarjeKarvenagar_9JSON, {
+      style: { fillOpacity: 0.2, weight: 2 },
+    }),
+
+    HadapsarMundhawa: L.geoJSON(HadapsarMundhawa_4JSON, {
+      style: { fillOpacity: 0.2, weight: 2 },
+    }),
+    WanawadiRamtekdi: L.geoJSON(WanawadiRamtekdi_5JSON, {
+      style: { fillOpacity: 0.2, weight: 2 },
+    }),
+    KondhwaYewalewadi: L.geoJSON(KondhwaYewalewadi_6JSON, {
+      style: { fillOpacity: 0.2, weight: 2 },
+    }),
+
+    KasbaVishrambagwada: L.geoJSON(KasbaVishrambagwada_3JSON, {
+      style: { fillOpacity: 0.2, weight: 2 },
+    }),
+    BhawaniPeth: L.geoJSON(Bhawani_Peth_2JSON, {
+      style: { fillOpacity: 0.2, weight: 2 },
+    }),
+    Bibwewadi: L.geoJSON(Bibwewadi_1JSON, {
+      style: { fillOpacity: 0.2, weight: 2 },
+    }),
+  };
+
+  Sweeper_Route.removeFrom(map);
+  cw.removeFrom(map);
+
+  for (var layer in geoJSONLayers) {
+    geoJSONLayers[layer].addTo(map);
+  }
+
+  cw.addTo(map);
+  Sweeper_Route.addTo(map);
+
+  function highlightFeature(layer) {
+    layer.setStyle({
+      weight: 3,
+      color: "red",
+      opacity: 1,
+    });
+  }
+
+  function resetHighlight(layer) {
+    layer.setStyle({
+      weight: 1,
+      color: "blue",
+      opacity: 1,
+    });
+  }
+
+  // function onMouseOver(e) {
+  //   var layer = e.target;
+  //   highlightFeature(layer);
+  // }
+
+  // function onMouseOut(e) {
+  //   var layer = e.target;
+  //   resetHighlight(layer);
+  // }
+
+  // function onListItemHover() {
+  //   var layerName = this.getAttribute("data-layer");
+  //   var layer = geoJSONLayers[layerName].getLayers()[0];
+  //   highlightFeature(layer);
+  // }
+
+  // function onListItemHoverOut() {
+  //   var layerName = this.getAttribute("data-layer");
+  //   var layer = geoJSONLayers[layerName].getLayers()[0];
+  //   resetHighlight(layer);
+  // }
+
+  // var listItems = document.querySelectorAll(".list-item");
+  // listItems.forEach(function (item) {
+  //   item.addEventListener("mouseover", onListItemHover);
+  //   item.addEventListener("mouseout", onListItemHoverOut);
+  // });
+
+  // *****************HOVER&CLICKZOOM***********************************************************
+
+  function onListItemClick(e) {
+    var layerName = this.getAttribute("data-layer");
+    var layer = geoJSONLayers[layerName].getLayers()[0];
+
+    // Get the LatLng bounds of the layer and fit the map view to it with some padding
+    var bounds = layer.getBounds();
+    map.flyToBounds(bounds, {
+      padding: [50, 50],
+    });
+  }
+
+  // Add Event Listeners for Hover and Click
+  var listItems = document.querySelectorAll(".list-item");
+  listItems.forEach(function (item) {
+    item.addEventListener("mouseover", function () {
+      var layerName = this.getAttribute("data-layer");
+      var layer = geoJSONLayers[layerName].getLayers()[0];
+      highlightFeature(layer);
+    });
+
+    item.addEventListener("mouseout", function () {
+      var layerName = this.getAttribute("data-layer");
+      var layer = geoJSONLayers[layerName].getLayers()[0];
+      resetHighlight(layer);
+    });
+
+    item.addEventListener("click", onListItemClick);
+  });
+</script>

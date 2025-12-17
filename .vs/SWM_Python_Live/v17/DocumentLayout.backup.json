@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\ISWM_Latest 16.12.2025\\ISWM_Latest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{35DBED1C-71D7-4B8C-9203-37ECF305897E}|SWM\\SWM.csproj|c:\\projects\\iswm_latest 16.12.2025\\iswm_latest\\swm\\controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35DBED1C-71D7-4B8C-9203-37ECF305897E}|SWM\\SWM.csproj|solutionrelative:swm\\controllers\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35DBED1C-71D7-4B8C-9203-37ECF305897E}|SWM\\SWM.csproj|c:\\projects\\iswm_latest 16.12.2025\\iswm_latest\\swm\\dashboard_main_swm.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{35DBED1C-71D7-4B8C-9203-37ECF305897E}|SWM\\SWM.csproj|solutionrelative:swm\\dashboard_main_swm.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataController.cs",
+              "DocumentMoniker": "C:\\Projects\\ISWM_Latest 16.12.2025\\ISWM_Latest\\SWM\\Controllers\\DataController.cs",
+              "RelativeDocumentMoniker": "SWM\\Controllers\\DataController.cs",
+              "ToolTip": "C:\\Projects\\ISWM_Latest 16.12.2025\\ISWM_Latest\\SWM\\Controllers\\DataController.cs",
+              "RelativeToolTip": "SWM\\Controllers\\DataController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T04:00:04.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dashboard_Main_SWM.aspx",
+              "DocumentMoniker": "C:\\Projects\\ISWM_Latest 16.12.2025\\ISWM_Latest\\SWM\\Dashboard_Main_SWM.aspx",
+              "RelativeDocumentMoniker": "SWM\\Dashboard_Main_SWM.aspx",
+              "ToolTip": "C:\\Projects\\ISWM_Latest 16.12.2025\\ISWM_Latest\\SWM\\Dashboard_Main_SWM.aspx",
+              "RelativeToolTip": "SWM\\Dashboard_Main_SWM.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-12-17T03:05:15.418Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

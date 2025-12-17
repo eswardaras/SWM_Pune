@@ -1,0 +1,1441 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SWM.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> ISWM</title>
+    <%--    <script type="text/javascript">
+        var commonApi = '<%= ConfigurationManager.AppSettings["CommonApiUrl"]%>';
+        var zoneApi = '<%= ConfigurationManager.AppSettings["ZoneApiUrl"]%>';
+        var wardApi = '<%= ConfigurationManager.AppSettings["WardApiUrl"]%>';
+        var kothiApi = '<%= ConfigurationManager.AppSettings["KothiApiUrl"]%>';
+        var routeApi = '<%= ConfigurationManager.AppSettings["RouteApiUrl"]%>';
+        var vehicleApi = '<%= ConfigurationManager.AppSettings["VehicleApiUrl"]%>';
+    </script>--%>
+
+    <%--    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>--%>
+
+    <%--<webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />--%>
+    <%-- <script
+        src="https://kit.fontawesome.com/caedeb6e96.js"
+        crossorigin="anonymous"></script> --%>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+        crossorigin="anonymous" />
+    <link
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link href="css/global.css" rel="stylesheet" />
+    <script src="js/purify.min.js"></script>
+    <style>
+        .main_sidebar li {
+            border: 1px solid #ccc;
+            margin: 0;
+        }
+
+        .main_sidebar ul {
+            border-radius: 0 !important;
+        }
+
+        .main_sidebar {
+            border-radius: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <%--<asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />--%>
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <%-- Loading Animation --%>
+        <div id="loadingSpinner" class="spinner_container active">
+            <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+        </div>
+        <%-- Loading Animation End--%>
+        <asp:HiddenField ID="csrfTokenInput" runat="server" />
+        <nav
+            class="navbar navbar-expand-lg d-flex justify-content-lg-between align-items-center p-0 main_nav position-fixed w-100">
+            <div class="nav_images">
+                <img src="Images/pmcsmart.png" alt="" class="border border-dark d-none d-md-inline-block" />
+                <img src="Images/pmc_logo.png" alt="" class="d-none d-md-inline-block" />
+                <img src="Images/logo.png" class="scs_logo d-none d-md-inline-block" alt="" />
+                <button
+                    class="btn p-0"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasScrolling"
+                    aria-controls="offcanvasScrolling"
+                    id="sidebar_btn">
+                    <i class="fa-solid fa-toggle-on sidebar_toggler"></i>
+                </button>
+            </div>
+            <div class="main_title">
+                <div class="fancy inset-text text-light d-none d-md-inline-block">
+                    INTEGRATED SOLID WASTE MANAGEMENT
+                </div>
+                <div class="fancy d-block d-md-none ">ISWM</div>
+            </div>
+            <div class="d-flex align-items-center">
+
+                <a href="https://orbusinfotech.com/" target="_blank" class="mx-2 orbus_logo_container d-none d-md-inline-block" title="Orbus Infotech">
+                    <img src="Images/orbus-logo.svg" alt="Orbus Infotech Logo" class="orbus_logo ml-1" />Orbus Infotech
+                </a>
+                <div class="dropdown-center">
+                    <button
+                        class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-person text-light"></i>
+                        <asp:Label ID="lblUserName" runat="server"></asp:Label>
+                    </button>
+                    <ul class="dropdown-menu nav_sublist">
+                        <li>
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fa-solid fa-phone mx-1"></i>
+                                    <span>Contact</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fa-solid fa-lock mx-1"></i>
+                                    <span>Change Password</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="fa-solid fa-key mx-1"></i>
+                                    <asp:Button ID="btnLogout" runat="server" OnClick="btnLogout_Click" Style="display: none;" />
+                                    <a id="logoutLink" href="javascript:document.getElementById('btnLogout').click();">Log Out</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <%-- Sidebar --%>
+        <div
+            class="offcanvas offcanvas-start show custom-offcanvas"
+            data-bs-scroll="true"
+            data-bs-backdrop="false"
+            tabindex="-1"
+            id="offcanvasScrolling"
+            aria-labelledby="offcanvasScrollingLabel"
+            style="z-index: 100">
+            <!-- <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div> -->
+            <div class="offcanvas-body p-0">
+                <ul class="list-group rounded-0 main_sidebar">
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="masterDBWrapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-chart-line mx-1"></i>
+                                    <a href="Dashboard_Main_SWM.aspx">Master Dashboard</a>
+                                </div>
+                            </div>
+                        </asp:Panel>
+                    </li>
+                    <li class="list-group-item p-0 d-none">
+                        <asp:Panel Visible="false" ID="analyticsWrapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-chart-line mx-1"></i>
+                                    <a href="Analytics.aspx">Deep Dive Insights</a>
+                                </div>
+                            </div>
+                        </asp:Panel>
+                    </li>
+                    <%--                    <li class="list-group-item p-0">
+                        <div
+                            class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                            <div>
+                                <i class="fa-solid fa-chart-simple mx-1"></i>
+                                <a href="SweeperRouteCoverage.aspx">Sweeper Attendance Analysis</a>
+                            </div>
+                        </div>
+                    </li>--%>
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="gisDbWrapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-earth-americas mx-1"></i>
+                                    <a href="GISDashboard.aspx">GIS Dashboard</a>
+                                </div>
+                            </div>
+                        </asp:Panel>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="fleetMngtWrapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-paper-plane mx-1"></i>
+                                    <span>Fleet Management</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <ul
+                                class="list-group rounded-0 p-0 list_toggler_content"
+                                style="display: none">
+                                <li class="list-group-item p-0">
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <%--<a href="FleetMap.aspx">Fleet Map</a>--%>
+                                            <a href="FleetManagement.aspx">Fleet Map</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-chart-line mx-1"></i>
+                                            <a href="Dashboard_FC_SWM.aspx">Feeder Dashboard</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-chart-line mx-1"></i>
+                                            <a href="DashBoard_Vehicle_SWM.aspx">Vehicle Dashboard</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="Feeder_Summary_Report.aspx">Feeder Summary Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="FeederCoverageReport.aspx">Feeder Coverage Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="DailyWasteDashboard.aspx">Daily Waste Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="PerformanceReports.aspx">Performace Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="AddBreakdown.aspx">Breakdown Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="MechSweeperReport.aspx">Mech. Sweeper Coverage Re...</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="JatayuReport.aspx">Jatayu Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="Tagregrestrationagdelhi_vehicles.aspx">RFID Tag Read Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="VehicleStatusReport.aspx">Vehicle Status Report</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <%--  <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0" title="Mechanical Sweeper Route Coverage Report">
+                                
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>--%>
+                            </ul>
+                        </asp:Panel>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="sweeperModuleWrapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-desktop mx-1"></i>
+                                    <span>Street Sweeping Module</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <ul
+                                class="list-group rounded-0 p-0 list_toggler_content"
+                                style="display: none">
+                                <li class="list-group-item p-0">
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-chart-line mx-1"></i>
+                                            <a href="Dashboard_SA_SWM.aspx">Sweeper Dashboard</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-chart-line mx-1"></i>
+                                            <a href="Dashboard_SRC_SWM.aspx">Sweeper Route Coverage</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center" title="Mokadam Dashboard">
+                                        <div>
+                                            <i class="fa-solid fa-chart-line mx-1"></i>
+                                            <a href="Dashboard_MKD_SWM.aspx">Mokadam Dashboard</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-address-book mx-1"></i>
+                                            <a href="SweeperAttendance.aspx">Sweeper Attendance</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-address-book mx-1"></i>
+                                            <a href="SweeperAttendanceSummary.aspx">Sweeper Attendance Summ...</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-address-book mx-1"></i>
+                                            <a href="SweeperBeatCoverageReport.aspx">Sweeper Beat Coverage Rep...</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <%--<a href="SwpeerManagement.aspx">Sweeper History Map</a>--%>
+                                            <a href="SweeperHistoryMap.aspx">Sweeper History Map</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <%--<a href="SwpeerManagement.aspx">Sweeper History Map</a>--%>
+                                            <a href="MokadumHistoryMap.aspx">Mokadum History Map</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-chart-line mx-1"></i>
+                                            <a href="Dashboard_Drain_SWM.aspx">Drainage Worker Dashboard</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-address-book mx-1"></i>
+                                            <a href="DrainageWorkerAttendance.aspx">Drainage Worker Attendance</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <a href="DrainageWorkerHistoryMap.aspx">Drainage Worker History Map</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <%-- <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0" title="Sweeper Attendance Summary">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                             
+                            </li>--%>
+                            </ul>
+                        </asp:Panel>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="hhCommercialWrapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-desktop mx-1"></i>
+                                    <span>HH Commercial Waste</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <ul
+                                class="list-group rounded-0 p-0 list_toggler_content"
+                                style="display: none">
+                                <li class="list-group-item p-0">
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-chart-line mx-1"></i>
+                                            <a href="Dashboard_CW_SWM.aspx">Collection Worker Dashboard</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-address-book mx-1"></i>
+                                            <a href="CollectionwokerAttendance.aspx">Collection Worker Attendance</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="Collectionworkerroutecoveregereport.aspx">C.W. Pocket Coverage Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <a href="CWPocketMap.aspx">C.W. Pocket Map</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <a href="CollectionWorkerGISMap.aspx">C.W.GIS Dashboard</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <%-- <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>--%>
+                            </ul>
+                        </asp:Panel>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="rampProcessingWrapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-desktop mx-1"></i>
+                                    <span>Ramp and Processing</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <%-- ASPX PAGES --%>
+                            <ul
+                                class="list-group rounded-0 p-0 list_toggler_content"
+                                style="display: none">
+                                <li class="list-group-item p-0">
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-chart-line mx-1"></i>
+                                            <a href="Dashboard_Ramp_SWM.aspx">Ramp Dashboard</a>
+                                        </div>
+                                    </div>
+                                    <asp:Panel Visible="false" ID="RampWaitTimeWrapper" runat="server">
+                                        <div
+                                            class="p-2 d-flex justify-content-between align-items-center">
+                                            <div>
+                                                <i class="fa-solid fa-list mx-1"></i>
+                                                <a href="EditRampVehicle.aspx">Edit Ramp Vehicle</a>
+                                            </div>
+                                        </div>
+                                    </asp:Panel>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="RampSummaryReport.aspx">Ramp Summary Report</a>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="PlantSummaryReport.aspx">Plant Summary Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="RampWaitTime.aspx">Ramp Wait Time</a>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="PlantWaitTime.aspx">Plant Wait Time</a>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="DatewiseWeightReport.aspx">Date Wise Weight Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="VehicleWiseWeightReport.aspx">Vehicle Wise Weight Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="PlantWiseTripReport.aspx">Plant Wise Trip Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="PrabhagWiseReport.aspx">Prabhag Wise Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="RampWiseReport.aspx">Ramp Wise Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="PlantWiseReport.aspx">Plant Wise Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="VehicleTypeWiseReport.aspx">Vehicle Type Wise Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="VehicleWiseTripsReport.aspx">Vehicle Wise Trips Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="ByproductsGenerationAndSalesRevenue.aspx">Byproduct Generation &...</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <%-- ASPX PAGES END --%>
+
+                            <%-- API PAGES --%>
+                            <%--<ul
+                            class="list-group rounded-0 p-0 list_toggler_content"
+                            style="display: none">
+                            <li class="list-group-item p-0">
+                                <div
+                                    class="p-2 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-gauge-high mx-1"></i>
+                                        <a href="RampDashboard.aspx" target="_blank">Ramp Dashboard</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-2 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-list mx-1"></i>
+                                        <a href="html/dateWiseWeightReport.html" target="_blank">Date Wise Weight Report</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-2 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-list mx-1"></i>
+                                        <a href="html/vehicleWiseWeightReport.html" target="_blank">Vehicle Wise Weight Report</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-2 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-list mx-1"></i>
+                                        <a href="html/plantWiseTripReport.html" target="_blank">Plant Wise Trip Report</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-2 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-list mx-1"></i>
+                                        <a href="html/prabhagWiseWeightReport.html" target="_blank">Prabhag Wise Report</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-2 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-list mx-1"></i>
+                                        <a href="html/rampWiseWeightReport.html" target="_blank">Ramp Wise Report</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-2 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-list mx-1"></i>
+                                        <a href="PlantWiseReport.aspx">Plant Wise Report</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-2 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-list mx-1"></i>
+                                        <a href="html/vehicleTypeWiseReport.html" target="_blank">Vehicle Type Wise Report</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-2 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-list mx-1"></i>
+                                        <a href="VehicleWiseTripsReport.aspx">Vehicle Wise Trips Report</a>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-2 d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <i class="fa-solid fa-list mx-1"></i>
+                                        <a href="ByproductsGenerationAndSalesRevenue.aspx">Byproduct Generation &...</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>--%>
+                            <%-- API PAGES END --%>
+                        </asp:Panel>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="spCdWRapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-earth-americas mx-1"></i>
+                                    <span>Specialized/C & D Waste</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <ul
+                                class="list-group rounded-0 p-0 list_toggler_content"
+                                style="display: none">
+                                <li class="list-group-item p-0">
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-plus mx-1"></i>
+                                            <a href="AdhocForm_CandD.aspx">Ad-hoc Form</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-plus mx-1"></i>
+                                            <a href="AdhocRequestReport.aspx">Ad-hoc Request Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="tripreportcanddandspecialwaste.aspx">Trip Report</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <%-- <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>--%>
+                            </ul>
+                        </asp:Panel>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="ctPtWrapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-desktop mx-1"></i>
+                                    <span>CT / PT Urinal</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <ul
+                                class="list-group rounded-0 p-0 list_toggler_content"
+                                style="display: none">
+                                <li class="list-group-item p-0">
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-chart-line mx-1"></i>
+                                            <a href="Dashboard_CTPT_SWM.aspx">CT PT Dashboard</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <%--<a href="CTPTGroupMap.aspx">CT PT GIS Map</a>--%>
+                                            <a href="CTPTGISDashboard.aspx">CT PT GIS Map</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="DailyCheckingReport.aspx">Daily Checkin Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="CTPTAssigned.aspx">CT PT Info</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="CTPTInsertEdit.aspx">CT PT Insert Edit</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <%-- <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                              
+                            </li>
+                            <li class="list-group-item p-0">
+                              
+                            </li>--%>
+                            </ul>
+                        </asp:Panel>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="litterBinWrapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-desktop mx-1"></i>
+                                    <span>Litter Bin</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <ul
+                                class="list-group rounded-0 p-0 list_toggler_content"
+                                style="display: none">
+                                <li class="list-group-item p-0">
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <a href="LitterbinMap.aspx">Litter Bin GIS Map</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </asp:Panel>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="campaignMngtWrapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-desktop mx-1"></i>
+                                    <span>Campaign Management</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <ul
+                                class="list-group rounded-0 p-0 list_toggler_content"
+                                style="display: none">
+                                <li class="list-group-item p-0">
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-plus mx-1"></i>
+                                            <a href="CreateCamp.aspx">Create Campaign</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item p-0">
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-clipboard-user mx-1"></i>
+                                            <a href="CampaignReport.aspx">Create Report</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </asp:Panel>
+                    </li>
+
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="fineMngtWrapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-desktop mx-1"></i>
+                                    <span>Fine Management</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <ul
+                                class="list-group rounded-0 p-0 list_toggler_content"
+                                style="display: none">
+                                <li class="list-group-item p-0">
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="FineManagementReport.aspx">Fine Management Report</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </asp:Panel>
+                    </li>
+
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="contBillWrapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-desktop mx-1"></i>
+                                    <span>Contract And Billing</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <ul
+                                class="list-group rounded-0 p-0 list_toggler_content"
+                                style="display: none">
+                                <li class="list-group-item p-0">
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="ContractorRegistration.aspx">Contractor Registration</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="BudgetHeadForm.aspx">Budget Head Form</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="ContractForm.aspx">Create Contract</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="RevokeForm.aspx">Revoke Form</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="RevokeReport.aspx">Revoke Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="GenerateBill.aspx">Generate Bill</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="BillDetails.aspx">Bill Details</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <%--  <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                              
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                           <li class="list-group-item p-0">
+                               
+                            </li>--%>
+                            </ul>
+                        </asp:Panel>
+                    </li>
+
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="shiftMngtWrapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-regular fa-clock mx-1"></i>
+                                    <span>Shift Management</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <ul
+                                class="list-group rounded-0 p-0 list_toggler_content"
+                                style="display: none">
+                                <li class="list-group-item p-0">
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-plus mx-1"></i>
+                                            <a href="AddShift.aspx">Add Shift/s</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-truck fa-flip-horizontal mx-1"></i>
+                                            <a href="http://10.0.139.221:5050/AssignShiftToVehicle.aspx" target="_blank">Assign Shift To Vehicle/s</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <%-- <li class="list-group-item p-0"></li>--%>
+                            </ul>
+                        </asp:Panel>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="geofenceMngtWrapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-earth-americas mx-1"></i>
+                                    <span>Geofence Management</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <ul
+                                class="list-group rounded-0 p-0 list_toggler_content"
+                                style="display: none">
+                                <li class="list-group-item p-0">
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-plus mx-1"></i>
+                                            <%--<a href="GeofenceManagement.aspx">Create Geofence</a>--%>
+                                            <a href="CreateGeofence.aspx">Create Geofence</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-plus mx-1"></i>
+                                            <a href="http://10.0.139.221:5050/AssignGeofence.aspx" target="_blank">Assign Geofence</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </asp:Panel>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="opMngtSection" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-desktop mx-1"></i>
+                                    <span>Operation Management</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <ul
+                                class="list-group rounded-0 p-0 list_toggler_content"
+                                style="display: none">
+                                <li class="list-group-item p-0">
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="DeleteDevice.aspx">Delete Device</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="TransationDataVehicles.aspx">Transaction Data Vehicles</a>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="DeviceBattery.aspx" target="_blank">Device Battery Report</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="DeviceManagement.aspx">Device Management</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-list mx-1"></i>
+                                            <a href="RampDataEntry.aspx" target="_blank">Ramp Monitoring</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-chart-line mx-1"></i>
+                                            <a href="Dashboard_IMEI_SWM.aspx" target="_blank">IMEI Ping Status</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-chart-line mx-1"></i>
+                                            <a href="kothiMonitoring.aspx" target="_blank">Kothi Monitoring</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-user mx-1"></i>
+                                            <a href="registernewdevice.aspx">Register New Device</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-user mx-1"></i>
+                                            <a href="MyVehicles.aspx">Edit Device Info</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-user mx-1"></i>
+                                            <a href="RouteTypeAndFeederCreation.aspx">Route and Feeder Creation</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-user mx-1"></i>
+                                            <a href="AddTypeOfEndProcessingUnit.aspx">Add Type Of End Process...</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-user mx-1"></i>
+                                            <a href="AddTypeOfWaste.aspx">Add Type of Waste</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-truck fa-flip-horizontal mx-1"></i>
+                                            <a href="http://10.0.139.221:5050/AddVehicleInfo.aspx" target="_blank">Add Vehicle Information</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-truck fa-flip-horizontal mx-1"></i>
+                                            <a href="ViewVehicleZoneWardKothi.aspx">View Vehicle Zone-Ward...</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-truck fa-flip-horizontal mx-1"></i>
+                                            <a href="EditVehicleInformation.aspx">Edit Vehicle Information</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-user mx-1"></i>
+                                            <a href="AddZoneWard.aspx">Add Zone/Ward</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-road mx-1"></i>
+                                            <a href="AddRoutePage.aspx">Add Route</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-road mx-1"></i>
+                                            <a href="http://10.0.139.221:5050/AddPolygon.aspx">Add Polygon</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <a href="http://10.0.139.221:5050/CreateFeederPoints.aspx">Create Feeder Point</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <a href="AddFeederPoint.aspx">Add Feeder Point</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <a href="AssignRoute.aspx">Assign Route</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <a href="EditRouteName.aspx">Edit Route Name</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <a href="http://10.0.139.221:5050/AssignZoneWardToVehicle.aspx" target="_blank">Assign ZoneWard ToVehicle</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <a href="AddRole.aspx">Add Role</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-user mx-1"></i>
+                                            <a href="EmailManagement.aspx">Email Management</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <%--   <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0" title="Add Type Of End Processing Unit">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                              
+                            </li>
+                            <li class="list-group-item p-0" title="View Vehicle Zone-Ward-Route">
+                              
+                            </li>
+                            <li class="list-group-item p-0">
+                                
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                                
+                            </li>
+                            <li class="list-group-item p-0">
+                               
+                            </li>--%>
+                            </ul>
+                        </asp:Panel>
+                    </li>
+                    <li class="list-group-item p-0">
+                        <asp:Panel Visible="false" ID="empMngtWrapper" runat="server">
+                            <div
+                                class="p-2 d-flex justify-content-between align-items-center list_toggler">
+                                <div>
+                                    <i class="fa-solid fa-user mx-1"></i>
+                                    <span>Employee Management</span>
+                                </div>
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <ul
+                                class="list-group rounded-0 p-0 list_toggler_content border nested__list"
+                                style="display: none">
+                                <li class="list-group-item p-0">
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <a href="http://10.0.139.221:5050/EmpRegistration.aspx" target="_blank">Add Employee</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <a href="http://10.0.139.221:5050/AssignEmpRelation.aspx" target="_blank">Assign Employee Relation</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <a href="http://10.0.139.221:5050/EmpLoginAccess.aspx" target="_blank">Employee Login Restriction</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="p-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <i class="fa-solid fa-location-dot mx-1"></i>
+                                            <a href="AssignZoneWardToEmployee.aspx" target="_blank">Assign Employee Zone-Ward... </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <%--  <li class="list-group-item p-0">
+                               
+                            </li>
+                            <li class="list-group-item p-0">
+                                
+                            </li>
+                            <li class="list-group-item p-0" title="Assign Employee Zone-Ward, Vehicle">
+                              
+                            </li>--%>
+                            </ul>
+                        </asp:Panel>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <%-- Sidebar End --%>
+
+        <div class="main-container main__container">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <%-- Loading Spinner --%>
+        <div class="spinner_container">
+            <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+        </div>
+        <%-- Loading Spinner End --%>
+    </form>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous">
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var listTogglers = document.querySelectorAll('.list_toggler');
+
+            listTogglers.forEach(function (listToggler) {
+                listToggler.addEventListener('click', function () {
+                    var nextElement = this.nextElementSibling;
+
+                    if (nextElement.style.display === 'none' || nextElement.style.display === '') {
+                        nextElement.style.display = 'block';
+                    } else {
+                        nextElement.style.display = 'none';
+                    }
+
+                    var chevronIcons = this.querySelectorAll('.fa-chevron-down, .fa-chevron-left');
+                    chevronIcons.forEach(function (icon) {
+                        icon.classList.toggle('fa-chevron-down');
+                        icon.classList.toggle('fa-chevron-left');
+                    });
+                });
+            });
+
+            var sidebarBtn = document.querySelector('#sidebar_btn i');
+
+            sidebarBtn.addEventListener('click', function () {
+                if (this.classList.contains('fa-toggle-on')) {
+                    this.classList.remove('fa-toggle-on');
+                    this.classList.add('fa-toggle-off');
+                } else {
+                    this.classList.remove('fa-toggle-off');
+                    this.classList.add('fa-toggle-on');
+                }
+            });
+        });
+
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            loadingSpinner.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

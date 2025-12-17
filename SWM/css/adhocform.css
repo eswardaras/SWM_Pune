@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'open sans';
+    list-style: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.content-container{
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+.first-container{
+    width: 100%;
+    /* height: 35%; */
+    border: 1px solid #d9d9d9;
+}
+.header{
+    width: 100%;
+    height: 10%;
+    background: #f9f9f9;
+    border-bottom: 1px solid #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-one{
+    width: 100%;
+    height: 5%;
+    background: #f9f9f9;
+    border-bottom: 1px solid #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    gap: 5px;
+    border-right: 1px solid #d9d9d9;
+}
+.header-content h4{
+    color: #555555;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+.header-content i{
+    color: #555555;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.drop-down{
+    width: 3%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    
+}
+.drop-down i{
+    font-size: 18px;
+    color: #555555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info-container{
+    width: 98%;
+    height: 79%;
+    /* background: tomato; */
+    margin: 12px;
+    display: inline-flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    row-gap: 15px;
+    gap: 20px;
+}
+.input-container{
+    width: 350px;
+    height: 33px;
+    border: 1px solid #d9d9d9;
+    outline: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    /* box-shadow: 0 0 5px #d9d9d9; */
+}
+.input-container span{
+    width: 100%;
+}
+.input-container i{
+    height: 100%;
+    width: 10%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #d9d9d9;
+   
+}
+
+.input-container input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+.info-box input{
+    width: 250px;
+    height: 33px;
+    border: 1px solid #d9d9d9;
+    margin-top: 4px;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+   
+}
+.drop-container{
+    width: 250px;
+    height: 25px;
+    border: 1px solid #d9d9d9;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.drop-box{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #d9d9d9;
+}
+.search-box{
+    height: 25px;
+    width: 250px;
+    border: 1px solid #d9d9d9;
+    background: white;
+    /* display: none; */
+}
+.search-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+.select{
+    border: 1px solid rgb(6, 102, 237);
+    width: 100%;
+    height: fit-content;
+    background: white;
+    /* display: none; */
+}
+.select li:hover{
+    background: #4D7496;
+    transition: .5s;
+    color: white;
+}
+.select li{
+    margin: 10px;
+}
+.radio-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    
+}
+.radio-container input{
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgb(11, 130, 209);
+}
+.radio-container span{
+    font-size: 13px;
+    font-weight: 600;
+    color: #555555;
+}
+.btn-box{
+    width: fit-content;
+    height: fit-content;
+    /* margin-top: 5px; */
+   
+}
+.btn-box button{
+    width: 80px;
+    height: 35px;
+    border: 1px solid #2f96b4;
+    background: #2f96b4;
+    color: white;
+    font-size: 13px;
+    margin-top: 26px;
+    margin-right: 100px;
+
+}
+.search-container-rec{
+    width: 350px;
+    height: 25px;
+    border: 1px solid rgb(11, 134, 216);
+    outline: none;
+}
+.search-container-rec input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+}
+.input-container span{
+    padding: 10px;
+    font-size: 12px;
+    color: grey;
+}
+.list{
+    border: 1px solid #d9d9d9;
+    height: 25px;
+    
+}
+.list-drop{
+    border: 1px solid #d9d9d9;
+    height: 200px;
+    background: white;
+    
+}
+.list-drop ul{
+    font-size: 12px;
+    padding: 5px;
+
+}
+.list ul{
+    font-size: 12px;
+    padding: 4px;
+    background: #f9f9f9;
+}
+.list-drop li{
+    margin: 10px;
+    color: grey;
+}
+.list-drop li:hover{
+    background: #4D7496;
+    transition: .5s;
+    color: white;
+}
+.info-section h3{
+    font-size: 13px;
+    color: #555555;
+    font-weight: 600;
+}
+.info-box h3{
+    font-size: 13px;
+    color: #555555;
+
+}
+.info-radio h3{
+    font-size: 13px;
+    color: #555555;
+    
+
+}
+.drop-container span{
+    font-size: 13px;
+    color: #555555;
+    padding: 5px;
+    font-weight: 600;
+
+}
+
+.dropdown-body {
+    display: none;
+}
+
+.dropdown-body.active {
+    display: inline-flex;
+}
+
+.dropdown-body_1 {
+    display: none;
+}
+
+.dropdown-body_1.active {
+    display: block;
+}
+.second-container{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d9d9d9;
+    margin-top: 60px;
+}
+.table-container{
+    width: 95%;
+    height: 80%;
+    /* background: tomato; */
+    margin: 80px 32px;
+    /* border: 1px solid #d9d9d9; */
+}
+table{
+    width: 100%;
+    height: 100%;
+}
+thead{
+    width: 100%;
+    height: 85px;
+    border-bottom: 1px solid #d9d9d9;
+    background: #f9f9f9;
+}
+thead tr{
+    font-size: 14px;
+    color: #555555;
+    font-weight: bold;
+    
+}
+tbody tr{
+    font-size: 13px;
+    
+    color: #555555;
+}
+
+tbody tr:hover{
+    background: #f9f9f9;
+    transition: .3s;
+}
+thead tr,
+thead th{
+    border: 1px solid #d9d9d9;
+}
+tbody tr,
+tbody th{
+    border: 1px solid #d9d9d9;
+
+}
+.green{
+    width: 100%;
+    height: 35%;
+    background: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.red{
+    width: 100%;
+    height: 35%;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+select[name="adhoc-table_length"]{
+    width: 40%;
+    height: 40px;
+    margin-top: 10px;
+    /* margin-left: 20px; */
+    border: 1px solid #d9d9d9;
+    outline: none; 
+}
+.dataTables_length label{
+    white-space: nowrap;
+    font-weight: 400;
+    color: gray;
+}
+.dataTables_filter{
+    border: 1px solid #d9d9d9;
+    width: 25%;
+    height: 40px;
+    margin-top: 10px;
+    
+}
+.dataTables_filter label input{
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid #d9d9d9;
+    outline: none;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    padding-left: 5px;
+
+}
+.dataTables_filter label i{
+    font-size: 20px;
+    font-weight: 600;
+    color: grey;
+    margin-left: 5px;
+   
+}
+.dataTables_filter label{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    
+}
+.dataTables_info{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.dataTables_paginate.paging_simple_numbers{
+    
+    margin-right: 20px;
+    color: gray;
+}
+.zone-section-wrapper{
+    width: 350px;
+    /* height: 25px; */
+    display: flex;
+    flex-direction: column;
+}
+.zone-section-wrapper label{
+    font-size: 13px;
+    color: #555555;
+    font-weight: 600;
+}
+.zone-section-wrapper select{
+    font-size: 13px;
+    color: #555555;
+}
+.remark-section label{
+    font-size: 13px;
+    color: #555555;
+    font-weight: 600;
+}
+.remark-container textarea{
+    height: 70px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.remark-container{
+    margin-top: -9px;
+}
+.dataTables_paginate.paging_simple_numbers{
+    
+    margin-right: 20px;
+    color: #4D7496;
+    border: 1px solid #d9d9d9;
+    position: relative;
+    top: 20px;
+
+}
+.paginate_button{
+    color: white !important;
+    border: 1px solid #3c5a74;
+    height: 100%;
+    background: #3c5a74;
+}
+.paginate_button span{
+    border-left: 1px solid #d9d9d9;
+    color: #4D7496 !important;
+}
+.paginate_button span:hover{
+    background: #d9d9d9;
+}
+.dataTables_wrapper{
+    width: 100%;
+    height: 20%;
+}
+tbody tr img{
+    width: 50px;
+    height: 50px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: white!important;
+    border: 1px solid #3C5A74;
+    background-color: white;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #dcdcdc));
+    background: -webkit-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: -moz-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: -ms-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: -o-linear-gradient(top, #fff 0%, #dcdcdc 100%);
+    background: #4D7496;}
+.dataTables_paginate.paging_simple_numbers {
+        margin-right: 20px;
+        color: #4D7496;
+        border: 1px solid #d9d9d9;
+        position: relative;
+        top: 20px;}  
+.dataTables_wrapper .dataTables_paginate {
+        color: #555555;
+        font-size: 13px;
+    
+        }          
+        .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+            cursor: default;
+            color: #666 !important;
+            border: 1px solid transparent;
+            background: transparent;
+            box-shadow: none;
+        }
+        .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+            color: white !important;
+            border: 1px solid #d9d9d9;
+            background-color: #585858;
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #585858), color-stop(100%, #111));
+            background: -webkit-linear-gradient(top, #585858 0%, #111 100%);
+            background: -moz-linear-gradient(top, #585858 0%, #111 100%);
+            background: -ms-linear-gradient(top, #585858 0%, #111 100%);
+            background: -o-linear-gradient(top, #585858 0%, #111 100%);
+            background: #bcbcbc;
+        }
+        .dataTables_wrapper .dataTables_paginate .paginate_button {
+            box-sizing: border-box;
+            display: inline-block;
+            min-width: 1.5em;
+            padding: 0.5em 1em;
+            /* margin-left: 2px; */
+            text-align: center;
+            text-decoration: none !important;
+            cursor: pointer;
+        }
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        .paginate_button {
+            color: #3C5A74 !important;
+            border: 1px solid #d9d9d9;
+            height: 100%;
+            /* background: #3c5a74; */
+        }
+        .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+            color: #555555;
+            font-size: 13px;
+        }
+
+
+        element.style {
+        }
+        .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+            color: #4D7496 !important;
+            border: 1px solid #d9d9d9;
+            background-color: #d9d9d9;
+            background: #d9d9d9;
+    
+        }
+        .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+            color: #4D7496 !important;
+            border: 1px solid #d9d9d9;
+            background-color: #4D7496;
+            background: #d9d9d9 !important;
+           
+        }        
+
+        .dataTables_wrapper .dataTables_paginate {
+            float: right;
+            text-align: right;
+            padding-top: 0 !important;
+        }    
+
+        .dataTables_wrapper .dataTables_paginate .paginate_button {
+            border-radius: 0 !important;
+            margin-left: 0 !important;
+            color: #4D7496 !important;
+            
+        } 
+        .paginate_button{
+            background: none !important;
+            border-right: 1px solid #d9d9d9 !important;
+            color: #4D7496 !important;
+        }
+        .dataTables_wrapper .dataTables_paginate .paginate_button.current{
+            background: #4D7496 !important;
+        }
+        .dataTables_length label{
+            white-space: nowrap;
+            font-weight: 800;
+            color: #555555;
+}
+table.dataTable td.dataTables_empty{
+    text-align: justify !important;
+}
+.fstlist > div.selected {
+    background-color: none !important;
+    color: white;
+}
+.fstlist > div.selected:hover {
+    background-color: #4D7496;
+    color: white;
+}
+.fstsearchinput{
+    border: 1px solid #4D7496;
+    outline: none;
+} 
+select[name="adhoc-table_length"]{
+    width: 40%;
+    height: 40px;
+    margin-top: 10px;
+    /* margin-left: 20px; */
+    border: 1px solid #d9d9d9;
+    outline: none; 
+}
+.dataTables_length label{
+    white-space: nowrap;
+    font-weight: 400;
+    color: gray;
+}
+.dataTables_filter{
+    border: 1px solid #d9d9d9;
+    width: 25%;
+    height: 40px;
+    margin-top: 10px;
+    
+}
+.dataTables_filter label input{
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid #d9d9d9;
+    outline: none;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    padding-left: 5px;
+
+}
+.dataTables_filter label i{
+    font-size: 20px;
+    font-weight: 600;
+    color: grey;
+    margin-left: 5px;
+   
+}
+.dataTables_filter label{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    
+}
+.dataTables_info{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.dataTables_paginate.paging_simple_numbers{
+    
+    margin-right: 20px;
+    color: gray;
+} 
+.dataTables_length label {
+    white-space: nowrap;
+    font-weight: 800;
+    color: #555555;
+}

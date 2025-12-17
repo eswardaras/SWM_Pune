@@ -1,0 +1,151 @@
+
+.hidden {
+    display: none;
+}
+
+.radio-label{
+  cursor: pointer;
+}
+#option-lable{
+    padding: 0px 0px 0px 17px;
+  }
+
+.option-pad-marg{
+    /* padding: 10px 0px 10px 0px; */
+    margin: 0px 15px 0px 15px;
+
+}
+
+.button-top-margin{
+    margin: 20px 0px 0px 0px !important;
+}
+
+.option-buttons{
+    margin: 0px 20px 20px 20px;
+}
+
+.width-200{
+  width: 200px;
+}
+.width-120{
+  width: 120px;
+}
+
+.arrow-marker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: red;
+}
+
+.start-icon {
+  background-image: url('../images/flag-icon.png'); 
+  background-size: cover;
+  width: 36px !important; 
+  height: 36px !important;
+  margin-left: -9px !important;
+  margin-top: -39px !important;
+}
+
+.custom-start-marker {
+  background-color: #ff0000; /* Replace with the desired background color for the start marker */
+  border-radius: 50%;
+  width: 120px; /* Adjust the width and height to match the size of your start marker */
+  height: 120px;
+  border: 2px solid #fff; /* Customize the border style */
+}
+
+.start-icon::after {
+  content: "start";
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: #2fb585;
+  opacity: 0; /* Hide the text initially */
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+.start-icon:hover::after {
+  opacity: 1; /* Show the text on hover */
+}
+.widget-content{
+  background-color: white;
+  /* padding-top: 10px; */
+  overflow: hidden;
+  transition: height 0.5s;
+  /* height: 100vh; */
+  height: fit-content;
+}
+
+.widget .widget-header {
+  border: 1px solid #ececec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #f9f9f9;
+}
+
+/* #option-lable{
+    padding: 0px 0px 0px 17px;
+  } */
+  /* I HAVE COMMENTED THE ABOVE LINE BECAUSE IT WAS UNNECCESSORY */
+
+#btn11:active {
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.13) inset;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.13) inset;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.13) inset;
+  background-color: #e6e6e6;
+  border-color: rgba(0, 0, 0, 0.13);
+}
+
+
+input[type="date"]::-webkit-datetime-edit, input[type="date"]::-webkit-inner-spin-button, input[type="date"]::-webkit-clear-button {
+  color: #fff;
+  position: relative;
+}
+
+input[type="date"]::-webkit-datetime-edit-year-field{
+  position: absolute !important;
+  border-left:1px solid #8c8c8c;
+  padding-left: 3px;
+  color:#000;
+  left: 65px;
+}
+
+input[type="date"]::-webkit-datetime-edit-month-field{
+  position: absolute !important;
+  border-left:1px solid #8c8c8c;
+  padding: 3px;
+  color:#000;
+  left: 26px;
+}
+
+
+input[type="date"]::-webkit-datetime-edit-day-field{
+  position: absolute !important;
+  color:#000;
+  padding: 2px;
+  left: 0px;
+  
+}
+
+.font-15 {
+  font-size: 15px;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-13 {
+  font-size: 14px;
+}
+
+.widget500 {
+  font-weight: 500;
+}

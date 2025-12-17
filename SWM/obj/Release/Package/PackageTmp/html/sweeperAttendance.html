@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/sweeperAttendance.css" />
+    <script
+      src="https://kit.fontawesome.com/e8c1c6e963.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap links -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"
+    />
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <!-- Bootstrap links end -->
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="attendance-section">
+      <div class="sweeper-attendance">
+        <div class="title">
+          <i class="fa-solid fa-book"></i>
+          <h3>Sweeper Attendance</h3>
+        </div>
+        <div class="body">
+          <div class="checkbox-wrapper">
+            <input type="radio" id="sweeper" />
+            <label for="sweeper">Sweeper</label>
+          </div>
+          <div class="checkbox-wrapper">
+            <input type="radio" id="Mokadam" />
+            <label for="sweeper">Mokadam</label>
+          </div>
+
+          <div class="filters">
+            <div class="dropdown-wrapper">
+              <h5>Zone Name</h5>
+              <div class="dropdown">
+                <div class="dropdown-title dropdown-btn">
+                  <span>All Zone</span>
+                  <i class="fa-solid fa-caret-down toggler"></i>
+                </div>
+                <div class="dropdown-body dropdown-content">
+                  <input type="search" />
+                  <ul class="option-list">
+                    <li>ALL ZONE</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>DEFAULT</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown-wrapper">
+              <h5>Ward Name</h5>
+              <div class="dropdown">
+                <div class="dropdown-title dropdown-btn">
+                  <span>All Ward</span>
+                  <i class="fa-solid fa-caret-down toggler"></i>
+                </div>
+                <div class="dropdown-body dropdown-content">
+                  <input type="search" />
+                  <ul class="option-list">
+                    <li>All Ward</li>
+                    <li>42</li>
+                    <li>AundhBaner</li>
+                    <li>Bhawani Peth</li>
+                    <li>Bibwewadi</li>
+                    <li>DEFAULT</li>
+                    <li>Dhankawadi-Sahakarnagar</li>
+                    <li>Dhole Patil Road</li>
+                    <li>Hadapsar-Mundhawa</li>
+                    <li>Kasba-Vishrambagwada</li>
+                    <li>Kondhwa-Yewalewadi</li>
+                    <li>Kothrud-Bawdhan</li>
+                    <li>Nagar Road - Wadgaon Sheri</li>
+                    <li>Shivajinagar-Ghole Road</li>
+                    <li>Sinhgad Road</li>
+                    <li>Wagholi</li>
+                    <li>Wanawadi-Ramtekdi</li>
+                    <li>Warje-Karvenagar</li>
+                    <li>Yerawada - Kalas - Dhanori</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="dropdown-wrapper">
+              <h5>Kothi Name</h5>
+              <div class="dropdown">
+                <div class="dropdown-title dropdown-btn">
+                  <span>All Kothi</span>
+                  <i class="fa-solid fa-caret-down toggler"></i>
+                </div>
+                <div class="dropdown-body dropdown-content">
+                  <input type="search" />
+                  <ul class="option-list">
+                    <li>All Kothi</li>
+                    <li>13 Tadiwala Road Arogya Kothi</li>
+                    <li>Aachalnagar Arogya Kothi</li>
+                    <li>Aakashvani Aarogya Korhi</li>
+                    <li>AANGRE SHALA HAJERI KOTHI</li>
+                    <li>5</li>
+                    <li>DEFAULT</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="date-wrapper">
+              <h5>FromDate</h5>
+              <input type="date" />
+            </div>
+
+            <div class="date-wrapper">
+              <h5>ToDate</h5>
+              <input type="date" />
+            </div>
+
+            <button class="search-button btn-blue">Search</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wardwise-attendance-section">
+      <div class="wardwise-attendance">
+        <div class="title dropdown-btn">
+          <h3>Ward Wise Attendance</h3>
+          <i class="fa-solid fa-chevron-down toggler"></i>
+        </div>
+        <div class="body collapsible active">
+          <table>
+            <thead>
+              <tr>
+                <th>Sr.No</th>
+                <th>Zone</th>
+                <th>Ward</th>
+                <th aria-sort="ascending">Date</th>
+                <th style="width: 10%">Total</th>
+                <th style="width: 10%">Present</th>
+                <th style="width: 10%">Absent</th>
+                <th style="width: 10%">Percent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>Shivajinagar-Ghole Road</td>
+                <td>18 Apr 2023</td>
+                <td><span>5</span></td>
+                <td><span>0</span></td>
+                <td><span>5</span></td>
+                <td>0%</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>5</td>
+                <td>Kasba-Vishrambagwada</td>
+                <td>18 Apr 2023</td>
+                <td><span>4</span></td>
+                <td><span>0</span></td>
+                <td><span>4</span></td>
+                <td>0%</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>2</td>
+                <td>AundhBaner</td>
+                <td>18 Apr 2023</td>
+                <td><span>656</span></td>
+                <td><span>438</span></td>
+                <td><span>218</span></td>
+                <td>66%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="kothiwise-attendance-section">
+      <div class="kothiwise-attendance">
+        <div class="title dropdown-btn">
+          <h3>Kothiwise Attendance</h3>
+          <i class="fa-solid fa-chevron-down toggler"></i>
+        </div>
+        <div class="body collapsible active">
+          <!-- <div class="record-filters">
+            <div>
+              <select class="perpage-filter">
+                <option>5</option>
+                <option>10</option>
+                <option>25</option>
+                <option>50</option>
+                <option>All</option>
+              </select>
+              <span>records per page</span>
+            </div>
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="search" />
+            </div>
+          </div> -->
+
+          <table id="kothiWise" class="table table-fluid">
+            <thead>
+              <tr>
+                <th>Sr.No</th>
+                <th>Zone</th>
+                <th>Ward</th>
+                <th>Date</th>
+                <th style="width: 10%">Total</th>
+                <th style="width: 10%">Present</th>
+                <th style="width: 10%">Absent</th>
+                <th style="width: 10%">Percent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>Shivajinagar-Ghole Road</td>
+                <td>18 Apr 2023</td>
+                <td><span>5</span></td>
+                <td><span>0</span></td>
+                <td><span>5</span></td>
+                <td>0%</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>5</td>
+                <td>Kasba-Vishrambagwada</td>
+                <td>18 Apr 2023</td>
+                <td><span>4</span></td>
+                <td><span>0</span></td>
+                <td><span>4</span></td>
+                <td>0%</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>2</td>
+                <td>AundhBaner</td>
+                <td>18 Apr 2023</td>
+                <td><span>656</span></td>
+                <td><span>438</span></td>
+                <td><span>218</span></td>
+                <td>66%</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="attendance-report-section">
+      <div class="attendance-report">
+        <div class="title dropdown-btn">
+          <div class="controls">
+            <div>
+              <h2>Pune Municipal Corporation</h2>
+              |
+              <h3>Attendance Report</h3>
+            </div>
+            <div>
+              <button class="total">Total 665</button>
+              <button class="present">Present 511</button>
+              <button class="absent">Absent 154</button>
+            </div>
+          </div>
+
+          <div class="downloads">
+            <img src="Images/xls.png" alt="excel logo" />
+            <img src="Images/pdf.png" alt="pdf logo" />
+            <i class="fa-solid fa-chevron-down toggler"></i>
+          </div>
+        </div>
+
+        <div class="body collapsible active">
+
+          <table id="attendanceReport" class="table table-fluid">
+            <thead>
+              <tr>
+                <th>Sr.No</th>
+                <th>Zone</th>
+                <th>Ward</th>
+                <th>Date</th>
+                <th style="width: 10%">Total</th>
+                <th style="width: 10%">Present</th>
+                <th style="width: 10%">Absent</th>
+                <th style="width: 10%">Percent</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>Shivajinagar-Ghole Road</td>
+                <td>18 Apr 2023</td>
+                <td><span>5</span></td>
+                <td><span>0</span></td>
+                <td><span>5</span></td>
+                <td>0%</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>5</td>
+                <td>Kasba-Vishrambagwada</td>
+                <td>18 Apr 2023</td>
+                <td><span>4</span></td>
+                <td><span>0</span></td>
+                <td><span>4</span></td>
+                <td>0%</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>2</td>
+                <td>AundhBaner</td>
+                <td>18 Apr 2023</td>
+                <td><span>656</span></td>
+                <td><span>438</span></td>
+                <td><span>218</span></td>
+                <td>66%</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </section>
+
+    <script>
+      $(document).ready(function () {
+        $("#kothiWise").DataTable();
+      });
+
+      $(document).ready(function () {
+        $("#attendanceReport").DataTable();
+      });
+
+      var table = $("#kothiWise").DataTable({
+        pageLength: 5,
+        language: {
+          lengthMenu: "_MENU_  records per page",
+          sSearch: "<img src='Images/search.png' alt='search'>",
+          paginate: {
+            first: "First",
+            last: "Last",
+            next: "Next &rarr;",
+            previous: "&larr; Previous",
+          },
+        },
+        lengthMenu: [
+          [5, 10, 25, 50, -1],
+          [5, 10, 25, 50, "All"],
+        ],
+      });
+
+      var table = $("#attendanceReport").DataTable({
+        pageLength: 5,
+        language: {
+          lengthMenu: "_MENU_  records per page",
+          sSearch: "<img src='Images/search.png' alt='search'>",
+          paginate: {
+            first: "First",
+            last: "Last",
+            next: "Next &rarr;",
+            previous: "&larr; Previous",
+          },
+        },
+        lengthMenu: [
+          [5, 10, 25, 50, -1],
+          [5, 10, 25, 50, "All"],
+        ],
+      });
+    </script>
+    <script src="js/sweeperAttendance.js"></script>
+  </body>
+</html>

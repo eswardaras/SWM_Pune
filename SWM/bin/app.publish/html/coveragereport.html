@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="fstdropdown.css">
+
+
+    <!-- Bootstrap links -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+          href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <!-- Bootstrap links end -->
+    <title>Feeder Coverage Report</title>
+    <link rel="stylesheet" href="coveragereport.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="heading">
+            <div class="heading-content">
+                <i class='bx bxs-book'></i>
+                <h4>Feeder Coverage Report</h4>
+            </div>
+            <div class="search-btn">
+                <i class='bx bx-search'></i>
+                <span>Search</span>
+            </div>
+        </div>
+        <div class="zone-section-container">
+            <div class="zone-section-wrapper">
+                <div class="zone-section">
+                    <label>Zone Name</label>
+                    <select class="fstdropdown-select">
+                        <option value="0">All Zone</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">DEFAULT</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="zone-section-wrapper">
+                <label>Ward Name</label>
+                <select class="fstdropdown-select">
+                    <option value="0">All Ward</option>
+                    <option value="1">42</option>
+                    <option value="2">AundhBaner</option>
+                    <option value="3">Bhawani Peth</option>
+                    <option value="4">Bibwewadi</option>
+                    <option value="5">DEFAULT</option>
+                    <option value="6">Dhankawadi-Sahakarnagar</option>
+                    <option value="7">Dhole Patil Road</option>
+                    <option value="8">Hadapsar-Mundhawa</option>
+                    <option value="9">Kasba-Vishrambagwada</option>
+                    <option value="10">Kondhwa-Yewalewadi</option>
+                    <option value="11">Kothrud-Bawdhan</option>
+                    <option value="12">Nagar Road-Wadgaon Road</option>
+                    <option value="13">Shivajinagar-Ghole Road</option>
+                    <option value="14">Sinhgad Road</option>
+                    <option value="15">Wagholi</option>
+                    <option value="16">Wanawadi-Ramtekdi</option>
+                    <option value="17">Warje-Karvenagar</option>
+                    <option value="18">Yerawada-Kalas-Dhanori</option>
+                </select>
+            </div>
+
+            <div class="zone-section-wrapper">
+                <label>Vehicle Name</label>
+                <select class="fstdropdown-select">
+                    <option value="0">All Vehicle</option>
+                    <option value="1">169</option>
+                    <option value="2">270</option>
+                    <option value="3">434</option>
+                    <option value="4">261</option>
+                    <option value="5">917</option>
+                    <option value="6">1133</option>
+                    <option value="7">5955</option>
+                    <option value="8">1135</option>
+                    <option value="9">5957</option>
+                    <option value="10">945</option>
+                    <option value="11">959</option>
+                    <option value="12">330</option>
+                    <option value="13">256</option>
+                    <option value="14">MH12NX5585</option>
+                    <option value="15">2738</option>
+                    <option value="16">3748</option>
+                    <option value="17">2437</option>
+                    <option value="18">2183</option>
+                    <option value="19">8557</option>
+                    <option value="20">1059</option>
+                    <option value="21">8479</option>
+                    <option value="22">8480</option>
+                    <option value="23">4933</option>
+                    <option value="24">5808</option>
+                    <option value="25">3235</option>
+                    <option value="26">MH04BG3260</option>
+                    <option value="27">275</option>
+                    <option value="28">MH12NX5619</option>
+                    <option value="29">MH01AP7157</option>
+                    <option value="30">MH01DR6925</option>
+                    <option value="31">MH01AP7091</option>
+                    <option value="32">MH01DR7241</option>
+                    <option value="33">411</option>
+                    <option value="34">388</option>
+                    <option value="35">901a</option>
+
+                </select>
+            </div>
+
+            <div class="duration-section">
+                <div class="from">
+                    <div class="name-section"><label>From Date</label></div>
+                    <input type="date">
+                </div>
+                <div class="from">
+                    <div class="name-section"><label>To Date</label></div>
+                    <input type="date">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="table-rec">
+            <div class="table-head">
+                <div class="text">
+                    <div class="text-one">
+                        <h1>Pune Municipal Corporation |</h1>
+                        <h2>Feeder Summary Report</h2>
+                        <span>: From 23-05-2023 to 23-05-2023</span>
+                    </div>
+                    <div class="image-icon">
+                        <img src="xls.png" alt="">
+                        <img src="pdf.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+            <div class="table-container">
+                <table id="adhoc-table" class="table-striped">
+                    <thead>
+                        <tr>
+                            <th>Sr. No</th>
+                            <th>Date</th>
+                            <th>Zone</th>
+                            <th>Ward</th>
+                            <th>Route</th>
+                            <th>Vehicle <br>%</th>
+                            <!-- <th>Name</th> -->
+                            <th>Total Feeder</th>
+                            <!-- <th>Entity Name</th> -->
+                            <th>Expected <br>Feeder</th>
+                            <th>Cover Feeder</th>
+
+                            <th>Uncover <br>Feeder</th>
+                            <th>Percentage %</th>
+                            <th>View <br>Route</th>
+                            <!-- <th>
+                              Assign <br />
+                              Vehicle
+                            </th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <th>27 Apr <br />2023</th>
+                            <th>3</th>
+                            <th>AundhBaner</th>
+                            <th>434</th>
+                            <th>434</th>
+                            <th>10</th>
+                            <th>10</th>
+                            <th>4</th>
+                            <th>6</th>
+                            <th>40</th>
+                            <th><a href="">View <br>Route</a></th>
+                        </tr>
+
+                        <tr>
+                            <th>1</th>
+                            <th>27 Apr <br />2023</th>
+                            <th>3</th>
+                            <th>AundhBaner</th>
+                            <th>434</th>
+                            <th>434</th>
+                            <th>10</th>
+                            <th>10</th>
+                            <th>4</th>
+                            <th>6</th>
+                            <th>40</th>
+                            <th><a href="">View <br>Route</a></th>
+                        </tr>
+
+                        <tr>
+                            <th>1</th>
+                            <th>27 Apr <br />2023</th>
+                            <th>3</th>
+                            <th>AundhBaner</th>
+                            <th>434</th>
+                            <th>434</th>
+                            <th>10</th>
+                            <th>10</th>
+                            <th>4</th>
+                            <th>6</th>
+                            <th>40</th>
+                            <th><a href="">View <br>Route</a></th>
+                        </tr>
+
+                        <tr>
+                            <th>1</th>
+                            <th>27 Apr <br />2023</th>
+                            <th>3</th>
+                            <th>AundhBaner</th>
+                            <th>434</th>
+                            <th>434</th>
+                            <th>10</th>
+                            <th>10</th>
+                            <th>4</th>
+                            <th>6</th>
+                            <th>40</th>
+                            <th><a href="">View <br>Route</a></th>
+                        </tr>
+
+                        <tr>
+                            <th>1</th>
+                            <th>27 Apr <br />2023</th>
+                            <th>3</th>
+                            <th>AundhBaner</th>
+                            <th>434</th>
+                            <th>434</th>
+                            <th>10</th>
+                            <th>10</th>
+                            <th>4</th>
+                            <th>6</th>
+                            <th>40</th>
+                            <th><a href="">View <br>Route</a></th>
+                        </tr>
+
+                        <tr>
+                            <th>1</th>
+                            <th>27 Apr <br />2023</th>
+                            <th>3</th>
+                            <th>AundhBaner</th>
+                            <th>434</th>
+                            <th>434</th>
+                            <th>10</th>
+                            <th>10</th>
+                            <th>4</th>
+                            <th>6</th>
+                            <th>40</th>
+                            <th><a href="">View <br>Route</a></th>
+                        </tr>
+
+                        <tr>
+                            <th>1</th>
+                            <th>27 Apr <br />2023</th>
+                            <th>3</th>
+                            <th>AundhBaner</th>
+                            <th>434</th>
+                            <th>434</th>
+                            <th>10</th>
+                            <th>10</th>
+                            <th>4</th>
+                            <th>6</th>
+                            <th>40</th>
+                            <th><a href="">View <br>Route</a></th>
+                        </tr>
+
+                        <tr>
+                            <th>1</th>
+                            <th>27 Apr <br />2023</th>
+                            <th>3</th>
+                            <th>AundhBaner</th>
+                            <th>434</th>
+                            <th>434</th>
+                            <th>10</th>
+                            <th>10</th>
+                            <th>4</th>
+                            <th>6</th>
+                            <th>40</th>
+                            <th><a href="">View <br>Route</a></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const dropdownBtn = document.querySelectorAll(".dropdown-btn");
+
+        dropdownBtn.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const body = btn.nextElementSibling;
+                body.classList.toggle("active");
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#adhoc-table").DataTable();
+        });
+
+        var table = $("#adhoc-table").DataTable({
+            pageLength: 5,
+            language: {
+                lengthMenu: "_MENU_  records per page",
+                sSearch: "<i class='bx bx-search'></i>",
+                paginate: {
+                    first: "First",
+                    last: "Last",
+                    next: "Next &rarr;",
+                    previous: "&larr; Previous",
+                },
+            },
+            lengthMenu: [
+                [5, 10, 25, 50, -1],
+                [5, 10, 25, 50, "All"],
+            ],
+        });
+    </script>
+    <script src="fstdropdown.js"></script>
+
+</body>
+</html>

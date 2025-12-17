@@ -1,0 +1,443 @@
+F:\Project\SWM\SWM\obj\Release\SWM.csproj.CoreCompileInputs.cache
+F:\Project\SWM\SWM\bin\SWM.dll.config
+F:\Project\SWM\SWM\bin\SWM.dll
+F:\Project\SWM\SWM\bin\SWM.pdb
+F:\Project\SWM\SWM\bin\roslyn\csc.exe
+F:\Project\SWM\SWM\bin\roslyn\csc.exe.config
+F:\Project\SWM\SWM\bin\roslyn\csc.rsp
+F:\Project\SWM\SWM\bin\roslyn\csi.exe
+F:\Project\SWM\SWM\bin\roslyn\csi.exe.config
+F:\Project\SWM\SWM\bin\roslyn\csi.rsp
+F:\Project\SWM\SWM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Project\SWM\SWM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Project\SWM\SWM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\Project\SWM\SWM\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Project\SWM\SWM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\Project\SWM\SWM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Project\SWM\SWM\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Project\SWM\SWM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\Project\SWM\SWM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\Project\SWM\SWM\bin\roslyn\Microsoft.Managed.Core.targets
+F:\Project\SWM\SWM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Project\SWM\SWM\bin\roslyn\System.AppContext.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Collections.Immutable.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Console.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\Project\SWM\SWM\bin\roslyn\System.IO.Compression.dll
+F:\Project\SWM\SWM\bin\roslyn\System.IO.FileSystem.dll
+F:\Project\SWM\SWM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\Project\SWM\SWM\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\Project\SWM\SWM\bin\roslyn\System.IO.Pipes.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Reflection.Metadata.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Security.AccessControl.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Security.Claims.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Security.Principal.Windows.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\Project\SWM\SWM\bin\roslyn\System.ValueTuple.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Xml.XmlDocument.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Xml.XPath.dll
+F:\Project\SWM\SWM\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\Project\SWM\SWM\bin\roslyn\vbc.exe
+F:\Project\SWM\SWM\bin\roslyn\vbc.exe.config
+F:\Project\SWM\SWM\bin\roslyn\vbc.rsp
+F:\Project\SWM\SWM\bin\roslyn\VBCSCompiler.exe
+F:\Project\SWM\SWM\bin\roslyn\VBCSCompiler.exe.config
+F:\Project\SWM\SWM\bin\Antlr3.Runtime.dll
+F:\Project\SWM\SWM\bin\AspNet.ScriptManager.bootstrap.dll
+F:\Project\SWM\SWM\bin\AspNet.ScriptManager.jQuery.dll
+F:\Project\SWM\SWM\bin\Microsoft.AspNet.FriendlyUrls.dll
+F:\Project\SWM\SWM\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+F:\Project\SWM\SWM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Project\SWM\SWM\bin\Microsoft.ScriptManager.MSAjax.dll
+F:\Project\SWM\SWM\bin\Microsoft.ScriptManager.WebForms.dll
+F:\Project\SWM\SWM\bin\Microsoft.Web.Infrastructure.dll
+F:\Project\SWM\SWM\bin\Newtonsoft.Json.dll
+F:\Project\SWM\SWM\bin\System.Web.Optimization.dll
+F:\Project\SWM\SWM\bin\WebGrease.dll
+F:\Project\SWM\SWM\bin\System.Web.Optimization.xml
+F:\Project\SWM\SWM\bin\Newtonsoft.Json.xml
+F:\Project\SWM\SWM\bin\Antlr3.Runtime.pdb
+F:\Project\SWM\SWM\bin\Microsoft.AspNet.FriendlyUrls.xml
+F:\Project\SWM\SWM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Project\SWM\SWM\obj\Release\SWM.csproj.CopyComplete
+F:\Project\SWM\SWM\obj\Release\SWM.dll
+F:\Project\SWM\SWM\obj\Release\SWM.pdb
+F:\Project\SWM\SWM\obj\Release\SWM.csprojAssemblyReference.cache
+F:\Project\SWM_20062023\SWM\SWM\bin\SWM.dll.config
+F:\Project\SWM_20062023\SWM\SWM\bin\SWM.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\SWM.pdb
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\csc.exe
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\csc.exe.config
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\csc.rsp
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\csi.exe
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\csi.exe.config
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\csi.rsp
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\Microsoft.Managed.Core.targets
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.AppContext.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Collections.Immutable.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Console.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.IO.Compression.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.IO.FileSystem.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.IO.Pipes.AccessControl.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.IO.Pipes.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Reflection.Metadata.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Security.AccessControl.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Security.Claims.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Security.Principal.Windows.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.ValueTuple.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Xml.XmlDocument.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Xml.XPath.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\vbc.exe
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\vbc.exe.config
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\vbc.rsp
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\VBCSCompiler.exe
+F:\Project\SWM_20062023\SWM\SWM\bin\roslyn\VBCSCompiler.exe.config
+F:\Project\SWM_20062023\SWM\SWM\bin\Antlr3.Runtime.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\AspNet.ScriptManager.bootstrap.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\AspNet.ScriptManager.jQuery.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\BouncyCastle.Crypto.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\DocumentFormat.OpenXml.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\EPPlus.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\EPPlus.Interfaces.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\EPPlus.System.Drawing.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\itextsharp.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\Microsoft.AspNet.FriendlyUrls.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\Microsoft.ScriptManager.MSAjax.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\Microsoft.ScriptManager.WebForms.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\Microsoft.Web.Infrastructure.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\Newtonsoft.Json.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\System.IO.Compression.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\System.IO.Compression.ZipFile.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\System.Net.Http.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\System.Security.Cryptography.Algorithms.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\System.Security.Cryptography.Encoding.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\System.Security.Cryptography.Primitives.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\System.Security.Cryptography.X509Certificates.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\System.Web.Optimization.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\WebGrease.dll
+F:\Project\SWM_20062023\SWM\SWM\bin\DocumentFormat.OpenXml.xml
+F:\Project\SWM_20062023\SWM\SWM\bin\EPPlus.xml
+F:\Project\SWM_20062023\SWM\SWM\bin\itextsharp.xml
+F:\Project\SWM_20062023\SWM\SWM\bin\System.Web.Optimization.xml
+F:\Project\SWM_20062023\SWM\SWM\bin\Newtonsoft.Json.xml
+F:\Project\SWM_20062023\SWM\SWM\bin\Antlr3.Runtime.pdb
+F:\Project\SWM_20062023\SWM\SWM\bin\Microsoft.AspNet.FriendlyUrls.xml
+F:\Project\SWM_20062023\SWM\SWM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Project\SWM_20062023\SWM\SWM\obj\Release\SWM.csprojAssemblyReference.cache
+F:\Project\SWM_20062023\SWM\SWM\obj\Release\SWM.csproj.CoreCompileInputs.cache
+F:\Project\SWM_20062023\SWM\SWM\obj\Release\SWM.csproj.CopyComplete
+F:\Project\SWM_20062023\SWM\SWM\obj\Release\SWM.dll
+F:\Project\SWM_20062023\SWM\SWM\obj\Release\SWM.pdb
+I:\Project\SWM_Live\SWM\SWM\bin\SWM.dll.config
+I:\Project\SWM_Live\SWM\SWM\bin\SWM.dll
+I:\Project\SWM_Live\SWM\SWM\bin\SWM.pdb
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\csc.exe
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\csc.exe.config
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\csc.rsp
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\csi.exe
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\csi.exe.config
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\csi.rsp
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\Microsoft.CodeAnalysis.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\Microsoft.CSharp.Core.targets
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\Microsoft.Managed.Core.targets
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.AppContext.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Collections.Immutable.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Console.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Diagnostics.StackTrace.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.IO.Compression.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.IO.FileSystem.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.IO.Pipes.AccessControl.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.IO.Pipes.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Reflection.Metadata.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Security.AccessControl.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Security.Claims.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Security.Principal.Windows.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Text.Encoding.CodePages.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.ValueTuple.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Xml.ReaderWriter.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Xml.XmlDocument.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Xml.XPath.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\System.Xml.XPath.XDocument.dll
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\vbc.exe
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\vbc.exe.config
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\vbc.rsp
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\VBCSCompiler.exe
+I:\Project\SWM_Live\SWM\SWM\bin\roslyn\VBCSCompiler.exe.config
+I:\Project\SWM_Live\SWM\SWM\bin\Antlr3.Runtime.dll
+I:\Project\SWM_Live\SWM\SWM\bin\AspNet.ScriptManager.bootstrap.dll
+I:\Project\SWM_Live\SWM\SWM\bin\AspNet.ScriptManager.jQuery.dll
+I:\Project\SWM_Live\SWM\SWM\bin\BouncyCastle.Crypto.dll
+I:\Project\SWM_Live\SWM\SWM\bin\DocumentFormat.OpenXml.dll
+I:\Project\SWM_Live\SWM\SWM\bin\EPPlus.dll
+I:\Project\SWM_Live\SWM\SWM\bin\EPPlus.Interfaces.dll
+I:\Project\SWM_Live\SWM\SWM\bin\EPPlus.System.Drawing.dll
+I:\Project\SWM_Live\SWM\SWM\bin\itextsharp.dll
+I:\Project\SWM_Live\SWM\SWM\bin\Microsoft.AspNet.FriendlyUrls.dll
+I:\Project\SWM_Live\SWM\SWM\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+I:\Project\SWM_Live\SWM\SWM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+I:\Project\SWM_Live\SWM\SWM\bin\Microsoft.ScriptManager.MSAjax.dll
+I:\Project\SWM_Live\SWM\SWM\bin\Microsoft.ScriptManager.WebForms.dll
+I:\Project\SWM_Live\SWM\SWM\bin\Microsoft.Web.Infrastructure.dll
+I:\Project\SWM_Live\SWM\SWM\bin\Newtonsoft.Json.dll
+I:\Project\SWM_Live\SWM\SWM\bin\System.IO.Compression.dll
+I:\Project\SWM_Live\SWM\SWM\bin\System.IO.Compression.ZipFile.dll
+I:\Project\SWM_Live\SWM\SWM\bin\System.Net.Http.dll
+I:\Project\SWM_Live\SWM\SWM\bin\System.Security.Cryptography.Algorithms.dll
+I:\Project\SWM_Live\SWM\SWM\bin\System.Security.Cryptography.Encoding.dll
+I:\Project\SWM_Live\SWM\SWM\bin\System.Security.Cryptography.Primitives.dll
+I:\Project\SWM_Live\SWM\SWM\bin\System.Security.Cryptography.X509Certificates.dll
+I:\Project\SWM_Live\SWM\SWM\bin\System.Web.Optimization.dll
+I:\Project\SWM_Live\SWM\SWM\bin\WebGrease.dll
+I:\Project\SWM_Live\SWM\SWM\bin\DocumentFormat.OpenXml.xml
+I:\Project\SWM_Live\SWM\SWM\bin\EPPlus.xml
+I:\Project\SWM_Live\SWM\SWM\bin\itextsharp.xml
+I:\Project\SWM_Live\SWM\SWM\bin\System.Web.Optimization.xml
+I:\Project\SWM_Live\SWM\SWM\bin\Newtonsoft.Json.xml
+I:\Project\SWM_Live\SWM\SWM\bin\Antlr3.Runtime.pdb
+I:\Project\SWM_Live\SWM\SWM\bin\Microsoft.AspNet.FriendlyUrls.xml
+I:\Project\SWM_Live\SWM\SWM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+I:\Project\SWM_Live\SWM\SWM\obj\Release\SWM.csproj.CoreCompileInputs.cache
+I:\Project\SWM_Live\SWM\SWM\obj\Release\SWM.csproj.CopyComplete
+I:\Project\SWM_Live\SWM\SWM\obj\Release\SWM.dll
+I:\Project\SWM_Live\SWM\SWM\obj\Release\SWM.pdb
+I:\Project\SWM_Live\SWM\SWM\obj\Release\SWM.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\SWM.dll.config
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\SWM.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\SWM.pdb
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\csc.exe
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\csc.exe.config
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\csc.rsp
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\csi.exe
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\csi.exe.config
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\csi.rsp
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.AppContext.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Console.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.IO.Compression.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Security.Claims.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.ValueTuple.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\vbc.exe
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\vbc.exe.config
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\vbc.rsp
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\VBCSCompiler.exe
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\Antlr3.Runtime.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\BouncyCastle.Crypto.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\DocumentFormat.OpenXml.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\EPPlus.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\EPPlus.Interfaces.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\EPPlus.System.Drawing.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\itextsharp.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\Newtonsoft.Json.Bson.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Buffers.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Memory.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Net.Http.Formatting.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Numerics.Vectors.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Web.Http.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Web.Optimization.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\WebGrease.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\DocumentFormat.OpenXml.xml
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\EPPlus.xml
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\itextsharp.xml
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\Newtonsoft.Json.Bson.pdb
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\Newtonsoft.Json.Bson.xml
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Buffers.xml
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Memory.xml
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Net.Http.Formatting.xml
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Numerics.Vectors.xml
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Web.Http.xml
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Web.Optimization.xml
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\Antlr3.Runtime.pdb
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\obj\Release\SWM.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\obj\Release\SWM.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\obj\Release\SWM.csproj.Up2Date
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\obj\Release\SWM.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\obj\Release\SWM.pdb
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Web.Http.WebHost.dll
+C:\Users\Administrator\Desktop\ISWM_Latest\SWM\bin\System.Web.Http.WebHost.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\SWM.dll.config
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\SWM.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\SWM.pdb
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\csc.exe
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\csc.exe.config
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\csc.rsp
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\csi.exe
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\csi.exe.config
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\csi.rsp
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\Microsoft.Managed.Core.targets
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.AppContext.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Collections.Immutable.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Console.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.IO.Compression.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.IO.FileSystem.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.IO.Pipes.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Reflection.Metadata.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Security.AccessControl.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Security.Claims.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Security.Principal.Windows.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.ValueTuple.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Xml.XmlDocument.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Xml.XPath.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\vbc.exe
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\vbc.exe.config
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\vbc.rsp
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\VBCSCompiler.exe
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\roslyn\VBCSCompiler.exe.config
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\Antlr3.Runtime.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\AspNet.ScriptManager.bootstrap.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\AspNet.ScriptManager.jQuery.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\BouncyCastle.Crypto.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\DocumentFormat.OpenXml.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\EPPlus.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\EPPlus.Interfaces.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\EPPlus.System.Drawing.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\itextsharp.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\Microsoft.AspNet.FriendlyUrls.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\Microsoft.ScriptManager.MSAjax.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\Microsoft.ScriptManager.WebForms.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\Microsoft.Web.Infrastructure.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\Newtonsoft.Json.Bson.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\Newtonsoft.Json.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Buffers.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Memory.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Net.Http.Formatting.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Numerics.Vectors.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Threading.Tasks.Extensions.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Web.Http.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Web.Http.WebHost.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Web.Optimization.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\WebGrease.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\DocumentFormat.OpenXml.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\EPPlus.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\itextsharp.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\Newtonsoft.Json.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\Newtonsoft.Json.Bson.pdb
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\Newtonsoft.Json.Bson.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Buffers.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Memory.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Net.Http.Formatting.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Numerics.Vectors.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Threading.Tasks.Extensions.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Web.Http.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Web.Http.WebHost.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\System.Web.Optimization.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\Antlr3.Runtime.pdb
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\Microsoft.AspNet.FriendlyUrls.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\obj\Release\SWM.csproj.AssemblyReference.cache
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\obj\Release\SWM.csproj.CoreCompileInputs.cache
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\obj\Release\SWM.csproj.Up2Date
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\obj\Release\SWM.dll
+E:\New folder\ISWM_Latest\ISWM_Latest\SWM\obj\Release\SWM.pdb

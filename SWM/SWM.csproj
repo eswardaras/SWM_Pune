@@ -1,0 +1,1967 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35DBED1C-71D7-4B8C-9203-37ECF305897E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SWM</RootNamespace>
+    <AssemblyName>SWM</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.20.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.20.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=6.2.4.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.6.2.4\lib\net35\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.1.1\lib\net35\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net35\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.2\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.6.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.3.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.3.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AddBreakdown.aspx" />
+    <Content Include="AddFeederPoint.aspx" />
+    <Content Include="AddPolygon.aspx" />
+    <Content Include="AddRole.aspx" />
+    <Content Include="AddRoute.aspx" />
+    <Content Include="AddRoutePage.aspx" />
+    <Content Include="AddRoutePage_Mobile.aspx" />
+    <Content Include="AddShift.aspx" />
+    <Content Include="AddTypeOfEndProcessingUnit.aspx" />
+    <Content Include="AddTypeOfWaste.aspx" />
+    <Content Include="AddVehicleInformation.aspx" />
+    <Content Include="AddZoneWard.aspx" />
+    <Content Include="AdhocForm_CandD.aspx" />
+    <Content Include="AdhocRequestReport.aspx" />
+    <Content Include="Analytics.aspx" />
+    <Content Include="AssignEmpRelation.aspx" />
+    <Content Include="AssignRoute.aspx" />
+    <Content Include="AssignShiftToVehicle.aspx" />
+    <Content Include="AssignZoneWardToEmployee.aspx" />
+    <Content Include="BillDetails.aspx" />
+    <Content Include="BudgetHeadForm.aspx" />
+    <Content Include="ByproductsGenerationAndSalesRevenue.aspx" />
+    <Content Include="CampaignReport.aspx" />
+    <Content Include="CollectionwokerAttendance.aspx" />
+    <Content Include="CollectionWorkerDashboard.aspx" />
+    <Content Include="CollectionWorkerGISMap.aspx" />
+    <Content Include="CollectionWorkerGISMap_Mobile.aspx" />
+    <Content Include="Collectionworkerroutecoveregereport.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\layers-2x.png" />
+    <Content Include="Content\images\layers.png" />
+    <Content Include="Content\images\marker-icon-2x.png" />
+    <Content Include="Content\images\marker-icon.png" />
+    <Content Include="Content\images\marker-shadow.png" />
+    <Content Include="Content\leaflet.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="ContractForm.aspx" />
+    <Content Include="ContractorRegistration.aspx" />
+    <Content Include="CreateCamp.aspx" />
+    <Content Include="CreateFeeder.aspx" />
+    <Content Include="CreateGeofence.aspx" />
+    <Content Include="CreateGeofence_Mobile.aspx" />
+    <Content Include="css\AddRoute.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\chosen-sprite%402x.png" />
+    <Content Include="css\chosen-sprite.png" />
+    <Content Include="css\chosen.css" />
+    <Content Include="css\dailywaste.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\fstdropdown.css" />
+    <Content Include="css\global.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\startIcon.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="css\summeryreport.css" />
+    <Content Include="css\sweeperAttendance.css" />
+    <Content Include="css\vehicleweight.css" />
+    <Content Include="CTPTAssigned.aspx" />
+    <Content Include="CTPTDashboard.aspx" />
+    <Content Include="CTPTGISDashboard.aspx" />
+    <Content Include="CTPTGISDashboard_Mobile.aspx" />
+    <Content Include="CTPTGroupMap.aspx" />
+    <Content Include="CTPTInsertEdit.aspx" />
+    <Content Include="CW POCKET\CW Pockets.html" />
+    <Content Include="CW POCKET\static\css\sweeperAttendance.css" />
+    <Content Include="CW POCKET\static\cwpockets.js" />
+    <Content Include="CWPocketDashboard.aspx" />
+    <Content Include="CWPocketMap.aspx" />
+    <Content Include="CWPocketMap_Mobile.aspx" />
+    <Content Include="DailyCheckingReport.aspx" />
+    <Content Include="DailyWasteDashboard.aspx" />
+    <Content Include="Dashboard_CW_SWM.aspx" />
+    <Content Include="Dashboard_CTPT_SWM.aspx" />
+    <Content Include="Dashboard_Drain_SWM.aspx" />
+    <Content Include="Dashboard_FC_SWM.aspx" />
+    <Content Include="Dashboard_IMEI_SWM.aspx" />
+    <Content Include="Dashboard_Main_SWM.aspx" />
+    <Content Include="Dashboard_MKD_SWM.aspx" />
+    <Content Include="Dashboard_Ramp_SWM.aspx" />
+    <Content Include="Dashboard_SA_SWM.aspx" />
+    <Content Include="Dashboard_SRC_SWM.aspx" />
+    <Content Include="DashBoard_Vehicle_SWM.aspx" />
+    <Content Include="DatewiseWeightReport.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DeleteDevice.aspx" />
+    <Content Include="DeviceBattery.aspx" />
+    <Content Include="DeviceManagement.aspx" />
+    <Content Include="DrainageWorkerAttendance.aspx" />
+    <Content Include="DrainageWorkerDashboard.aspx" />
+    <Content Include="DrainageWorkerHistoryMap.aspx" />
+    <Content Include="EditDeviceInfo.aspx" />
+    <Content Include="EditRampVehicle.aspx" />
+    <Content Include="EditRouteName.aspx" />
+    <Content Include="EditVehicleInformation.aspx" />
+    <Content Include="EmailManagement.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="FeederCoverageReport.aspx" />
+    <Content Include="FeederDashboard.aspx" />
+    <Content Include="FeederSummaryMap.aspx" />
+    <Content Include="FeederSummaryReport.aspx" />
+    <Content Include="Feeder_Summary_Report.aspx" />
+    <Content Include="FineManagementReport.aspx" />
+    <Content Include="FleetManagement.aspx" />
+    <Content Include="FleetMap.aspx" />
+    <Content Include="FleetMap_Mobile.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="GenerateBill.aspx" />
+    <Content Include="GeofenceManagement.aspx" />
+    <Content Include="geoJSONTest.aspx" />
+    <Content Include="GISDashboard.aspx" />
+    <Content Include="GISDashboard_Mobile.aspx" />
+    <Content Include="GISMAP\data\AundhBaner_12.js" />
+    <Content Include="GISMAP\data\Bhawani_Peth_2.js" />
+    <Content Include="GISMAP\data\Bibwewadi_1.js" />
+    <Content Include="GISMAP\data\CT_18.js" />
+    <Content Include="GISMAP\data\CT_18o.js" />
+    <Content Include="GISMAP\data\cwpockets.js" />
+    <Content Include="GISMAP\data\DhankawadiSahakarnagar_7.js" />
+    <Content Include="GISMAP\data\Dhole_Patil_13.js" />
+    <Content Include="GISMAP\data\Feeder_17.js" />
+    <Content Include="GISMAP\data\HadapsarMundhawa_4.js" />
+    <Content Include="GISMAP\data\KasbaVishrambagwada_3.js" />
+    <Content Include="GISMAP\data\KondhwaYewalewadi_6.js" />
+    <Content Include="GISMAP\data\kothi_0.js" />
+    <Content Include="GISMAP\data\KOTHI_BUFFER_1_16.js" />
+    <Content Include="GISMAP\data\KothrudBawdhan_10.js" />
+    <Content Include="GISMAP\data\NagarRoadWadgaonsheri_15.js" />
+    <Content Include="GISMAP\data\PT_19.js" />
+    <Content Include="GISMAP\data\PT_19o.js" />
+    <Content Include="GISMAP\data\puneward.js" />
+    <Content Include="GISMAP\data\ShivajinagarGhole_Road_11.js" />
+    <Content Include="GISMAP\data\Sinhagad_Road_8.js" />
+    <Content Include="GISMAP\data\Sweeper_Route_Line_buffercopy_14.js" />
+    <Content Include="GISMAP\data\URINALS_20.js" />
+    <Content Include="GISMAP\data\URINALS_20o.js" />
+    <Content Include="GISMAP\data\WanawadiRamtekdi_5.js" />
+    <Content Include="GISMAP\data\ward_poly_13.js" />
+    <Content Include="GISMAP\data\WarjeKarvenagar_9.js" />
+    <Content Include="GISMAP\data\YerwadaKalasDhanori_14.js" />
+    <Content Include="GISMAP\GIS_MAP.html" />
+    <Content Include="GISMAP\markers\CT.png" />
+    <Content Include="GISMAP\markers\Feeder.png" />
+    <Content Include="GISMAP\markers\gf.png" />
+    <Content Include="GISMAP\markers\PT.png" />
+    <Content Include="GISMAP\markers\Ur.png" />
+    <Content Include="GISMAP\static\css\sweeperAttendance.css" />
+    <Content Include="GIS_Map_html.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="GroupReport.aspx" />
+    <Content Include="html\coveragereport.html" />
+    <Content Include="html\dailywaste.html" />
+    <Content Include="html\dateWiseWeightReport.html" />
+    <Content Include="html\plantWiseTripReport.html" />
+    <Content Include="html\prabhagWiseWeightReport.html" />
+    <Content Include="html\rampWiseWeightReport.html" />
+    <Content Include="html\summeryreport.html" />
+    <Content Include="html\sweeperAttendance.html" />
+    <Content Include="html\vehicleTypeWiseReport.html" />
+    <Content Include="html\vehicleWiseWeightReport.html" />
+    <Content Include="Images\1truckblue.png" />
+    <Content Include="Images\301.gif" />
+    <Content Include="Images\BLUEFEEDER.png" />
+    <Content Include="Images\blue_circle.png" />
+    <Content Include="Images\Blue_feeder.png" />
+    <Content Include="Images\broom_icon.png" />
+    <Content Include="Images\car.png" />
+    <Content Include="Images\collectionWorker.png" />
+    <Content Include="Images\CronicSpotIcon2.png" />
+    <Content Include="Images\CT.png" />
+    <Content Include="Images\degree.png" />
+    <Content Include="Images\delivery-truck.png" />
+    <Content Include="Images\dot.png" />
+    <Content Include="Images\dotb.png" />
+    <Content Include="Images\dotgreen.png" />
+    <Content Include="Images\dotred.png" />
+    <Content Include="Images\drainageWorker.png" />
+    <Content Include="Images\fast-forward.png" />
+    <Content Include="Images\feeder.png" />
+    <Content Include="Images\flag-icon.png" />
+    <Content Include="Images\garbage_throw.png" />
+    <Content Include="Images\gf.png" />
+    <Content Include="Images\greenflag.png" />
+    <Content Include="Images\hand_icon.png" />
+    <Content Include="Images\Image__2.jpg" />
+    <Content Include="Images\indianOilLogo.png" />
+    <Content Include="Images\litterbin.png" />
+    <Content Include="Images\login_background.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\mask_icon.png" />
+    <Content Include="Images\orbus-logo.svg" />
+    <Content Include="Images\pdf.png" />
+    <Content Include="Images\placeholderDailyChecking.jpeg" />
+    <Content Include="Images\pmc-logo.png" />
+    <Content Include="Images\pmcsmart.png" />
+    <Content Include="Images\pmc_logo.png" />
+    <Content Include="Images\pmc_pages_background.jpg" />
+    <Content Include="Images\PT.png" />
+    <Content Include="Images\rb.png" />
+    <Content Include="Images\REDFEEDER.png" />
+    <Content Include="Images\redflag.png" />
+    <Content Include="Images\Red_feeder.png" />
+    <Content Include="Images\right-arrow.png" />
+    <Content Include="Images\scs-tech-logo.jpg" />
+    <Content Include="Images\search.png" />
+    <Content Include="Images\swachh-bharat.jpg" />
+    <Content Include="Images\tab-img.jpg" />
+    <Content Include="Images\truckb.png" />
+    <Content Include="Images\trucki.png" />
+    <Content Include="Images\truckin.png" />
+    <Content Include="Images\truckmain.png" />
+    <Content Include="Images\truckP.png" />
+    <Content Include="Images\truckr.png" />
+    <Content Include="Images\truckw.png" />
+    <Content Include="Images\truck_icon.png" />
+    <Content Include="Images\Ur.png" />
+    <Content Include="Images\Urinal.png" />
+    <Content Include="Images\WayIcon.png" />
+    <Content Include="Images\worker.png" />
+    <Content Include="Images\xls.png" />
+    <Content Include="IMEIPingStatus.aspx" />
+    <Content Include="index.html" />
+    <Content Include="IOCLDash.aspx" />
+    <Content Include="IOCLGIS.aspx" />
+    <Content Include="IOCLLogin.aspx" />
+    <Content Include="IOCLLogin.html" />
+    <Content Include="JatayuHistoryMap.aspx" />
+    <Content Include="JatayuMap.aspx" />
+    <Content Include="JatayuReport.aspx" />
+    <Content Include="JatayuRouteCoverage.aspx" />
+    <Content Include="js\AddFeederPoint.js" />
+    <Content Include="js\AddRole.js" />
+    <Content Include="js\AddRoute.js" />
+    <Content Include="js\AddShift.js" />
+    <Content Include="js\AddTypeOfEndProcessingUnit.js" />
+    <Content Include="js\AddTypeOfWaste.js" />
+    <Content Include="js\AddVehicleInformation.js" />
+    <Content Include="js\AddZoneWard.js" />
+    <Content Include="js\assignRoute.js" />
+    <Content Include="js\AssignShiftToVehicle.js" />
+    <Content Include="js\AssignZoneWardToEmployee.js" />
+    <Content Include="js\axios.js" />
+    <Content Include="js\CampaignReport.js" />
+    <Content Include="js\CollectionWorkerGISMap.js" />
+    <Content Include="js\createGeofence.js" />
+    <Content Include="js\CTPTGISDashboard.js" />
+    <Content Include="js\dateWiseWeightReport.js" />
+    <Content Include="js\DeleteDevice.js" />
+    <Content Include="js\DeviceManagement.js" />
+    <Content Include="js\DrainageWorkerAttendance.js" />
+    <Content Include="js\DrainageWorkerHistoryMap.js" />
+    <Content Include="js\EditDeviceInfo.js" />
+    <Content Include="js\EditRampVehicle.js" />
+    <Content Include="js\EditRouteName.js" />
+    <Content Include="js\EditVehicleInformation.js" />
+    <Content Include="js\EmailManagement.js" />
+    <Content Include="js\FeederSummaryMap.js" />
+    <Content Include="js\FeederSummaryReport.js" />
+    <Content Include="js\FleetManagement.js" />
+    <Content Include="js\fstdropdown.js" />
+    <Content Include="js\GISDashboard.js" />
+    <Content Include="js\JatayuMap.js" />
+    <Content Include="js\JatayuReport.js" />
+    <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\kothiMonitoring.js" />
+    <Content Include="js\leaflet.browser.print.min.js" />
+    <Content Include="js\leaflet.label.js" />
+    <Content Include="js\Leaflet.Marker.SlideTo.js" />
+    <Content Include="js\leaflet.polylineDecorator.js" />
+    <Content Include="js\LitterbinGISMap.js" />
+    <Content Include="js\mechSweeperHistoryMap.js" />
+    <Content Include="js\mechSweeperReport.js" />
+    <Content Include="js\MokadamHistoryMap.js" />
+    <Content Include="js\MyVehicles.js" />
+    <Content Include="js\PlantSummaryReport.js" />
+    <Content Include="js\PlantWaitTime.js" />
+    <Content Include="js\plantWiseTripReport.js" />
+    <Content Include="js\prabhagWiseWeightReport.js" />
+    <Content Include="js\purify.min.js" />
+    <Content Include="js\RampSummaryReport.js" />
+    <Content Include="js\RampWaitTime.js" />
+    <Content Include="js\rampWiseWeightReport.js" />
+    <Content Include="js\RouteTypeAndFeederCreation.js" />
+    <Content Include="js\SweeperBeatCoverageReport.js" />
+    <Content Include="js\sweeperHistoryMap.js" />
+    <Content Include="js\TransationDataVehicles.js" />
+    <Content Include="js\VehicleStatusReport.js" />
+    <Content Include="js\vehicleTypeWiseReport.js" />
+    <Content Include="js\vehicleWiseWeightReport.js" />
+    <Content Include="js\ViewVehicleZoneWardRoute.js" />
+    <Content Include="kothiMonitoring.aspx" />
+    <Content Include="Litterbingismap.aspx" />
+    <Content Include="LitterBinMap.aspx" />
+    <Content Include="LitterbinMap_Mobile.aspx" />
+    <Content Include="LiveAnalysis.aspx" />
+    <Content Include="Livetracking.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Login.html" />
+    <Content Include="maindashboard.aspx" />
+    <Content Include="MechanicalSweeperRouteCoverageReport.aspx" />
+    <Content Include="MechSweeperHistoryMap.aspx" />
+    <Content Include="MechSweeperReport.aspx" />
+    <Content Include="MokadamAttendance.aspx" />
+    <Content Include="MokadumHistoryMap.aspx" />
+    <Content Include="MokadumHistoryMap_Mobile.aspx" />
+    <Content Include="mypyfile2.py" />
+    <Content Include="MyVehicles.aspx" />
+    <Content Include="ObtainIp.aspx" />
+    <Content Include="PerformanceReports.aspx" />
+    <Content Include="PlantSummaryReport.aspx" />
+    <Content Include="PlantWaitTime.aspx" />
+    <Content Include="PlantWiseReport.aspx" />
+    <Content Include="PlantWiseTripReport.aspx" />
+    <Content Include="PrabhagWiseReport.aspx" />
+    <Content Include="PrivacyPolicy.html" />
+    <Content Include="RampDashboard.aspx" />
+    <Content Include="RampDataEntry.aspx" />
+    <Content Include="RampSummaryReport.aspx" />
+    <Content Include="RampWaitTime.aspx" />
+    <Content Include="RampWiseReport.aspx" />
+    <Content Include="registernewdevice.aspx" />
+    <Content Include="RevokeForm.aspx" />
+    <Content Include="RevokeReport.aspx" />
+    <Content Include="RouteTypeAndFeederCreation.aspx" />
+    <Content Include="Scripts\axios.js" />
+    <Content Include="Scripts\chosen.jquery.js" />
+    <Content Include="Scripts\fstdropdown.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\leaflet-0.7.3.js" />
+    <Content Include="Scripts\leaflet-0.7.3.min.js" />
+    <Content Include="Scripts\mechCharts.js" />
+    <Content Include="Scripts\sweeperAttendance.js" />
+    <Content Include="Scripts\sweeperAttendanceChart.js" />
+    <Content Include="Scripts\transactionDataVehicles.js" />
+    <Content Include="service\ct.txt" />
+    <Content Include="service\cw.txt" />
+    <Content Include="service\feeder.txt" />
+    <Content Include="service\geofence.txt" />
+    <Content Include="service\kothi.txt" />
+    <Content Include="service\pt.txt" />
+    <Content Include="service\sweeper.txt" />
+    <Content Include="service\ur.txt" />
+    <Content Include="service\ward1.txt" />
+    <Content Include="SweeperAttendance.aspx" />
+    <Content Include="SweeperAttendanceSummary.aspx" />
+    <Content Include="SweeperBeatCoverageReport.aspx" />
+    <Content Include="SweeperDashboard.aspx" />
+    <Content Include="SweeperHistoryMap.aspx" />
+    <Content Include="SweeperHistoryMap_Mobile.aspx" />
+    <Content Include="SWEEPERMaster.aspx" />
+    <Content Include="SweeperRouteCoverage.aspx" />
+    <Content Include="SwpeerManagement.aspx" />
+    <Content Include="Tagregrestrationagdelhi_vehicles.aspx" />
+    <Content Include="test.aspx" />
+    <Content Include="transactionDataVehicles.html" />
+    <Content Include="TransationDataVehicles.aspx" />
+    <Content Include="tripreportcanddandspecialwaste.aspx" />
+    <Content Include="UploadReport.aspx" />
+    <Content Include="VehicleDashboard.aspx" />
+    <Content Include="VehicleMap.aspx" />
+    <Content Include="VehicleMapViewHistory.aspx" />
+    <Content Include="VehicleMapViewHistory1.aspx" />
+    <Content Include="VehicleMapViewHistory2.aspx" />
+    <Content Include="VehiclesDashboard.aspx" />
+    <Content Include="VehicleStatusReport.aspx" />
+    <Content Include="VehicleTypeWiseReport.aspx" />
+    <Content Include="VehicleWiseTripsReport.aspx" />
+    <Content Include="VehicleWiseWeightReport.aspx" />
+    <Content Include="ViewVehicleZoneWardKothi.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="WebForm3.aspx" />
+    <Content Include="CW POCKET\static\cwpockets.geojson" />
+    <Content Include="js\geofence.geojson" />
+    <Content Include="WebForm4.aspx" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile10.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile100.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile101.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile102.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile103.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile104.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile105.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile106.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile107.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile108.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile109.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile11.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile110.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile111.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile112.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile113.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile114.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile115.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile116.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile117.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile118.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile119.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile12.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile120.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile121.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile122.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile123.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile124.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile125.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile126.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile127.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile128.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile129.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile13.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile130.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile131.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile132.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile133.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile134.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile135.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile136.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile137.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile138.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile139.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile14.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile140.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile141.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile142.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile143.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile144.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile145.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile146.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile147.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile148.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile149.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile15.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile150.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile151.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile152.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile153.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile154.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile155.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile156.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile157.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile158.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile159.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile16.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile160.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile161.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile162.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile163.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile164.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile165.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile166.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile167.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile168.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile169.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile17.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile170.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile171.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile172.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile173.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile174.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile175.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile176.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile18.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile19.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile2.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile20.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile21.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile22.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile23.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile24.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile25.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile26.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile27.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile28.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile29.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile3.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile30.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile31.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile32.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile33.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile34.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile35.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile36.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile37.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile38.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile39.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile4.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile40.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile41.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile42.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile43.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile44.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile45.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile46.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile47.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile48.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile49.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile5.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile50.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile51.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile52.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile53.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile54.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile55.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile56.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile57.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile58.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile59.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile6.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile60.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile61.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile62.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile63.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile64.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile65.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile66.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile67.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile68.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile69.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile7.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile70.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile71.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile72.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile73.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile74.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile75.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile76.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile77.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile78.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile79.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile8.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile80.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile81.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile82.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile83.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile84.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile85.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile86.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile87.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile88.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile89.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile9.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile90.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile91.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile92.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile93.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile94.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile95.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile96.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile97.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile98.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile99.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="html\index.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddBreakdown.aspx.cs">
+      <DependentUpon>AddBreakdown.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddBreakdown.aspx.designer.cs">
+      <DependentUpon>AddBreakdown.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddFeederPoint.aspx.cs">
+      <DependentUpon>AddFeederPoint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddFeederPoint.aspx.designer.cs">
+      <DependentUpon>AddFeederPoint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddPolygon.aspx.cs">
+      <DependentUpon>AddPolygon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddPolygon.aspx.designer.cs">
+      <DependentUpon>AddPolygon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddRole.aspx.cs">
+      <DependentUpon>AddRole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddRole.aspx.designer.cs">
+      <DependentUpon>AddRole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddRoute.aspx.cs">
+      <DependentUpon>AddRoute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddRoute.aspx.designer.cs">
+      <DependentUpon>AddRoute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddRoutePage.aspx.cs">
+      <DependentUpon>AddRoutePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddRoutePage.aspx.designer.cs">
+      <DependentUpon>AddRoutePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddRoutePage_Mobile.aspx.cs">
+      <DependentUpon>AddRoutePage_Mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddRoutePage_Mobile.aspx.designer.cs">
+      <DependentUpon>AddRoutePage_Mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddShift.aspx.cs">
+      <DependentUpon>AddShift.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddShift.aspx.designer.cs">
+      <DependentUpon>AddShift.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddTypeOfEndProcessingUnit.aspx.cs">
+      <DependentUpon>AddTypeOfEndProcessingUnit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddTypeOfEndProcessingUnit.aspx.designer.cs">
+      <DependentUpon>AddTypeOfEndProcessingUnit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddTypeOfWaste.aspx.cs">
+      <DependentUpon>AddTypeOfWaste.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddTypeOfWaste.aspx.designer.cs">
+      <DependentUpon>AddTypeOfWaste.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddVehicleInformation.aspx.cs">
+      <DependentUpon>AddVehicleInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddVehicleInformation.aspx.designer.cs">
+      <DependentUpon>AddVehicleInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddZoneWard.aspx.cs">
+      <DependentUpon>AddZoneWard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddZoneWard.aspx.designer.cs">
+      <DependentUpon>AddZoneWard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdhocForm_CandD.aspx.cs">
+      <DependentUpon>AdhocForm_CandD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdhocForm_CandD.aspx.designer.cs">
+      <DependentUpon>AdhocForm_CandD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdhocRequestReport.aspx.cs">
+      <DependentUpon>AdhocRequestReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdhocRequestReport.aspx.designer.cs">
+      <DependentUpon>AdhocRequestReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analytics.aspx.cs">
+      <DependentUpon>Analytics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Analytics.aspx.designer.cs">
+      <DependentUpon>Analytics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="AssignEmpRelation.aspx.cs">
+      <DependentUpon>AssignEmpRelation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssignEmpRelation.aspx.designer.cs">
+      <DependentUpon>AssignEmpRelation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssignRoute.aspx.cs">
+      <DependentUpon>AssignRoute.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssignRoute.aspx.designer.cs">
+      <DependentUpon>AssignRoute.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssignShiftToVehicle.aspx.cs">
+      <DependentUpon>AssignShiftToVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssignShiftToVehicle.aspx.designer.cs">
+      <DependentUpon>AssignShiftToVehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssignZoneWardToEmployee.aspx.cs">
+      <DependentUpon>AssignZoneWardToEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssignZoneWardToEmployee.aspx.designer.cs">
+      <DependentUpon>AssignZoneWardToEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BAL\BAL.cs" />
+    <Compile Include="BAL\BALAdhoc.cs" />
+    <Compile Include="BAL\BALContrator.cs" />
+    <Compile Include="BAL\BALCTPT.cs" />
+    <Compile Include="BAL\BalFeederSummaryReport.cs" />
+    <Compile Include="BAL\BALOperation.cs" />
+    <Compile Include="BAL\HHComercialBAL.cs" />
+    <Compile Include="BAL\RampBAL.cs" />
+    <Compile Include="BillDetails.aspx.cs">
+      <DependentUpon>BillDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BillDetails.aspx.designer.cs">
+      <DependentUpon>BillDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BudgetHeadForm.aspx.cs">
+      <DependentUpon>BudgetHeadForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BudgetHeadForm.aspx.designer.cs">
+      <DependentUpon>BudgetHeadForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ByproductsGenerationAndSalesRevenue.aspx.cs">
+      <DependentUpon>ByproductsGenerationAndSalesRevenue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ByproductsGenerationAndSalesRevenue.aspx.designer.cs">
+      <DependentUpon>ByproductsGenerationAndSalesRevenue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CampaignReport.aspx.cs">
+      <DependentUpon>CampaignReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CampaignReport.aspx.designer.cs">
+      <DependentUpon>CampaignReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionwokerAttendance.aspx.cs">
+      <DependentUpon>CollectionwokerAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CollectionwokerAttendance.aspx.designer.cs">
+      <DependentUpon>CollectionwokerAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionWorkerDashboard.aspx.cs">
+      <DependentUpon>CollectionWorkerDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CollectionWorkerDashboard.aspx.designer.cs">
+      <DependentUpon>CollectionWorkerDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionWorkerGISMap.aspx.cs">
+      <DependentUpon>CollectionWorkerGISMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CollectionWorkerGISMap.aspx.designer.cs">
+      <DependentUpon>CollectionWorkerGISMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CollectionWorkerGISMap_Mobile.aspx.cs">
+      <DependentUpon>CollectionWorkerGISMap_Mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CollectionWorkerGISMap_Mobile.aspx.designer.cs">
+      <DependentUpon>CollectionWorkerGISMap_Mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Collectionworkerroutecoveregereport.aspx.cs">
+      <DependentUpon>Collectionworkerroutecoveregereport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Collectionworkerroutecoveregereport.aspx.designer.cs">
+      <DependentUpon>Collectionworkerroutecoveregereport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContractForm.aspx.cs">
+      <DependentUpon>ContractForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContractForm.aspx.designer.cs">
+      <DependentUpon>ContractForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorRegistration.aspx.cs">
+      <DependentUpon>ContractorRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContractorRegistration.aspx.designer.cs">
+      <DependentUpon>ContractorRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\DataController.cs" />
+    <Compile Include="CreateCamp.aspx.cs">
+      <DependentUpon>CreateCamp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateCamp.aspx.designer.cs">
+      <DependentUpon>CreateCamp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateFeeder.aspx.cs">
+      <DependentUpon>CreateFeeder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateFeeder.aspx.designer.cs">
+      <DependentUpon>CreateFeeder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateGeofence.aspx.cs">
+      <DependentUpon>CreateGeofence.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateGeofence.aspx.designer.cs">
+      <DependentUpon>CreateGeofence.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateGeofence_Mobile.aspx.cs">
+      <DependentUpon>CreateGeofence_Mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateGeofence_Mobile.aspx.designer.cs">
+      <DependentUpon>CreateGeofence_Mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CTPTAssigned.aspx.cs">
+      <DependentUpon>CTPTAssigned.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CTPTAssigned.aspx.designer.cs">
+      <DependentUpon>CTPTAssigned.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CTPTDashboard.aspx.cs">
+      <DependentUpon>CTPTDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CTPTDashboard.aspx.designer.cs">
+      <DependentUpon>CTPTDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CTPTGISDashboard.aspx.cs">
+      <DependentUpon>CTPTGISDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CTPTGISDashboard.aspx.designer.cs">
+      <DependentUpon>CTPTGISDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CTPTGISDashboard_Mobile.aspx.cs">
+      <DependentUpon>CTPTGISDashboard_Mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CTPTGISDashboard_Mobile.aspx.designer.cs">
+      <DependentUpon>CTPTGISDashboard_Mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CTPTGroupMap.aspx.cs">
+      <DependentUpon>CTPTGroupMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CTPTGroupMap.aspx.designer.cs">
+      <DependentUpon>CTPTGroupMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CTPTInsertEdit.aspx.cs">
+      <DependentUpon>CTPTInsertEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CTPTInsertEdit.aspx.designer.cs">
+      <DependentUpon>CTPTInsertEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CWPocketDashboard.aspx.cs">
+      <DependentUpon>CWPocketDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CWPocketDashboard.aspx.designer.cs">
+      <DependentUpon>CWPocketDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CWPocketMap.aspx.cs">
+      <DependentUpon>CWPocketMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CWPocketMap.aspx.designer.cs">
+      <DependentUpon>CWPocketMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CWPocketMap_Mobile.aspx.cs">
+      <DependentUpon>CWPocketMap_Mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CWPocketMap_Mobile.aspx.designer.cs">
+      <DependentUpon>CWPocketMap_Mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DailyCheckingReport.aspx.cs">
+      <DependentUpon>DailyCheckingReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DailyCheckingReport.aspx.designer.cs">
+      <DependentUpon>DailyCheckingReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DailyWasteDashboard.aspx.cs">
+      <DependentUpon>DailyWasteDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DailyWasteDashboard.aspx.designer.cs">
+      <DependentUpon>DailyWasteDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\BaseData.cs" />
+    <Compile Include="DAL\DAL.cs" />
+    <Compile Include="DAL\DALAdhoc.cs" />
+    <Compile Include="DAL\DALContractor.cs" />
+    <Compile Include="DAL\DALCTPT.cs" />
+    <Compile Include="DAL\DalFeederSummaryReport.cs" />
+    <Compile Include="DAL\DalOperation.cs" />
+    <Compile Include="DAL\DalRamp.cs" />
+    <Compile Include="DAL\HHComercialDAL.cs" />
+    <Compile Include="Dashboard_CW_SWM.aspx.cs">
+      <DependentUpon>Dashboard_CW_SWM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_CW_SWM.aspx.designer.cs">
+      <DependentUpon>Dashboard_CW_SWM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_CTPT_SWM.aspx.cs">
+      <DependentUpon>Dashboard_CTPT_SWM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_Drain_SWM.aspx.cs">
+      <DependentUpon>Dashboard_Drain_SWM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_FC_SWM.aspx.cs">
+      <DependentUpon>Dashboard_FC_SWM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_IMEI_SWM.aspx.cs">
+      <DependentUpon>Dashboard_IMEI_SWM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_Main_SWM.aspx.cs">
+      <DependentUpon>Dashboard_Main_SWM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_Main_SWM.aspx.designer.cs">
+      <DependentUpon>Dashboard_Main_SWM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_MKD_SWM.aspx.cs">
+      <DependentUpon>Dashboard_MKD_SWM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_MKD_SWM.aspx.designer.cs">
+      <DependentUpon>Dashboard_MKD_SWM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_Ramp_SWM.aspx.cs">
+      <DependentUpon>Dashboard_Ramp_SWM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_SA_SWM.aspx.cs">
+      <DependentUpon>Dashboard_SA_SWM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard_SA_SWM.aspx.designer.cs">
+      <DependentUpon>Dashboard_SA_SWM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_SRC_SWM.aspx.cs">
+      <DependentUpon>Dashboard_SRC_SWM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashBoard_Vehicle_SWM.aspx.cs">
+      <DependentUpon>DashBoard_Vehicle_SWM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashBoard_Vehicle_SWM.aspx.designer.cs">
+      <DependentUpon>DashBoard_Vehicle_SWM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatewiseWeightReport.aspx.cs">
+      <DependentUpon>DatewiseWeightReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatewiseWeightReport.aspx.designer.cs">
+      <DependentUpon>DatewiseWeightReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteDevice.aspx.cs">
+      <DependentUpon>DeleteDevice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteDevice.aspx.designer.cs">
+      <DependentUpon>DeleteDevice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceBattery.aspx.cs">
+      <DependentUpon>DeviceBattery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeviceBattery.aspx.designer.cs">
+      <DependentUpon>DeviceBattery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceManagement.aspx.cs">
+      <DependentUpon>DeviceManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeviceManagement.aspx.designer.cs">
+      <DependentUpon>DeviceManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DrainageWorkerAttendance.aspx.cs">
+      <DependentUpon>DrainageWorkerAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrainageWorkerAttendance.aspx.designer.cs">
+      <DependentUpon>DrainageWorkerAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DrainageWorkerDashboard.aspx.cs">
+      <DependentUpon>DrainageWorkerDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrainageWorkerDashboard.aspx.designer.cs">
+      <DependentUpon>DrainageWorkerDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DrainageWorkerHistoryMap.aspx.cs">
+      <DependentUpon>DrainageWorkerHistoryMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DrainageWorkerHistoryMap.aspx.designer.cs">
+      <DependentUpon>DrainageWorkerHistoryMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditDeviceInfo.aspx.cs">
+      <DependentUpon>EditDeviceInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditDeviceInfo.aspx.designer.cs">
+      <DependentUpon>EditDeviceInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditRampVehicle.aspx.cs">
+      <DependentUpon>EditRampVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditRampVehicle.aspx.designer.cs">
+      <DependentUpon>EditRampVehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditRouteName.aspx.cs">
+      <DependentUpon>EditRouteName.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditRouteName.aspx.designer.cs">
+      <DependentUpon>EditRouteName.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditVehicleInformation.aspx.cs">
+      <DependentUpon>EditVehicleInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditVehicleInformation.aspx.designer.cs">
+      <DependentUpon>EditVehicleInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailManagement.aspx.cs">
+      <DependentUpon>EmailManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmailManagement.aspx.designer.cs">
+      <DependentUpon>EmailManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeederCoverageReport.aspx.cs">
+      <DependentUpon>FeederCoverageReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeederCoverageReport.aspx.designer.cs">
+      <DependentUpon>FeederCoverageReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeederDashboard.aspx.cs">
+      <DependentUpon>FeederDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeederDashboard.aspx.designer.cs">
+      <DependentUpon>FeederDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeederSummaryMap.aspx.cs">
+      <DependentUpon>FeederSummaryMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeederSummaryMap.aspx.designer.cs">
+      <DependentUpon>FeederSummaryMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeederSummaryReport.aspx.cs">
+      <DependentUpon>FeederSummaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeederSummaryReport.aspx.designer.cs">
+      <DependentUpon>FeederSummaryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Feeder_Summary_Report.aspx.cs">
+      <DependentUpon>Feeder_Summary_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feeder_Summary_Report.aspx.designer.cs">
+      <DependentUpon>Feeder_Summary_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FineManagementReport.aspx.cs">
+      <DependentUpon>FineManagementReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FineManagementReport.aspx.designer.cs">
+      <DependentUpon>FineManagementReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetManagement.aspx.cs">
+      <DependentUpon>FleetManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetManagement.aspx.designer.cs">
+      <DependentUpon>FleetManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetMap.aspx.cs">
+      <DependentUpon>FleetMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetMap.aspx.designer.cs">
+      <DependentUpon>FleetMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FleetMap_Mobile.aspx.cs">
+      <DependentUpon>FleetMap_Mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FleetMap_Mobile.aspx.designer.cs">
+      <DependentUpon>FleetMap_Mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GenerateBill.aspx.cs">
+      <DependentUpon>GenerateBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenerateBill.aspx.designer.cs">
+      <DependentUpon>GenerateBill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeofenceManagement.aspx.cs">
+      <DependentUpon>GeofenceManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeofenceManagement.aspx.designer.cs">
+      <DependentUpon>GeofenceManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="geoJSONTest.aspx.cs">
+      <DependentUpon>geoJSONTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="geoJSONTest.aspx.designer.cs">
+      <DependentUpon>geoJSONTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GISDashboard.aspx.cs">
+      <DependentUpon>GISDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GISDashboard.aspx.designer.cs">
+      <DependentUpon>GISDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GISDashboard_Mobile.aspx.cs">
+      <DependentUpon>GISDashboard_Mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GISDashboard_Mobile.aspx.designer.cs">
+      <DependentUpon>GISDashboard_Mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GIS_Map_html.aspx.cs">
+      <DependentUpon>GIS_Map_html.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GIS_Map_html.aspx.designer.cs">
+      <DependentUpon>GIS_Map_html.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GroupReport.aspx.cs">
+      <DependentUpon>GroupReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GroupReport.aspx.designer.cs">
+      <DependentUpon>GroupReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IMEIPingStatus.aspx.cs">
+      <DependentUpon>IMEIPingStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IMEIPingStatus.aspx.designer.cs">
+      <DependentUpon>IMEIPingStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IOCLDash.aspx.cs">
+      <DependentUpon>IOCLDash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IOCLDash.aspx.designer.cs">
+      <DependentUpon>IOCLDash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IOCLGIS.aspx.cs">
+      <DependentUpon>IOCLGIS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IOCLGIS.aspx.designer.cs">
+      <DependentUpon>IOCLGIS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IOCLLogin.aspx.cs">
+      <DependentUpon>IOCLLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IOCLLogin.aspx.designer.cs">
+      <DependentUpon>IOCLLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JatayuHistoryMap.aspx.cs">
+      <DependentUpon>JatayuHistoryMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JatayuHistoryMap.aspx.designer.cs">
+      <DependentUpon>JatayuHistoryMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JatayuMap.aspx.cs">
+      <DependentUpon>JatayuMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JatayuMap.aspx.designer.cs">
+      <DependentUpon>JatayuMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JatayuReport.aspx.cs">
+      <DependentUpon>JatayuReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JatayuReport.aspx.designer.cs">
+      <DependentUpon>JatayuReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JatayuRouteCoverage.aspx.cs">
+      <DependentUpon>JatayuRouteCoverage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JatayuRouteCoverage.aspx.designer.cs">
+      <DependentUpon>JatayuRouteCoverage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="kothiMonitoring.aspx.cs">
+      <DependentUpon>kothiMonitoring.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="kothiMonitoring.aspx.designer.cs">
+      <DependentUpon>kothiMonitoring.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Litterbingismap.aspx.cs">
+      <DependentUpon>Litterbingismap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Litterbingismap.aspx.designer.cs">
+      <DependentUpon>Litterbingismap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LitterBinMap.aspx.cs">
+      <DependentUpon>LitterBinMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LitterBinMap.aspx.designer.cs">
+      <DependentUpon>LitterBinMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LitterbinMap_Mobile.aspx.cs">
+      <DependentUpon>LitterbinMap_Mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LitterbinMap_Mobile.aspx.designer.cs">
+      <DependentUpon>LitterbinMap_Mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LiveAnalysis.aspx.cs">
+      <DependentUpon>LiveAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LiveAnalysis.aspx.designer.cs">
+      <DependentUpon>LiveAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Livetracking.aspx.cs">
+      <DependentUpon>Livetracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Livetracking.aspx.designer.cs">
+      <DependentUpon>Livetracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logfile.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="maindashboard.aspx.cs">
+      <DependentUpon>maindashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="maindashboard.aspx.designer.cs">
+      <DependentUpon>maindashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MechanicalSweeperRouteCoverageReport.aspx.cs">
+      <DependentUpon>MechanicalSweeperRouteCoverageReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MechanicalSweeperRouteCoverageReport.aspx.designer.cs">
+      <DependentUpon>MechanicalSweeperRouteCoverageReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MechSweeperHistoryMap.aspx.cs">
+      <DependentUpon>MechSweeperHistoryMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MechSweeperHistoryMap.aspx.designer.cs">
+      <DependentUpon>MechSweeperHistoryMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MechSweeperReport.aspx.cs">
+      <DependentUpon>MechSweeperReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MechSweeperReport.aspx.designer.cs">
+      <DependentUpon>MechSweeperReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\CsrfTokenManager.cs" />
+    <Compile Include="MODEL\FeederSummaryReport.cs" />
+    <Compile Include="MODEL\MAP.cs" />
+    <Compile Include="MODEL\SweeperAttendance.cs" />
+    <Compile Include="MokadamAttendance.aspx.cs">
+      <DependentUpon>MokadamAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MokadamAttendance.aspx.designer.cs">
+      <DependentUpon>MokadamAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MokadumHistoryMap.aspx.cs">
+      <DependentUpon>MokadumHistoryMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MokadumHistoryMap.aspx.designer.cs">
+      <DependentUpon>MokadumHistoryMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MokadumHistoryMap_Mobile.aspx.cs">
+      <DependentUpon>MokadumHistoryMap_Mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MokadumHistoryMap_Mobile.aspx.designer.cs">
+      <DependentUpon>MokadumHistoryMap_Mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MyVehicles.aspx.cs">
+      <DependentUpon>MyVehicles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MyVehicles.aspx.designer.cs">
+      <DependentUpon>MyVehicles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ObtainIp.aspx.cs">
+      <DependentUpon>ObtainIp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObtainIp.aspx.designer.cs">
+      <DependentUpon>ObtainIp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerformanceReports.aspx.cs">
+      <DependentUpon>PerformanceReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerformanceReports.aspx.designer.cs">
+      <DependentUpon>PerformanceReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlantSummaryReport.aspx.cs">
+      <DependentUpon>PlantSummaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlantSummaryReport.aspx.designer.cs">
+      <DependentUpon>PlantSummaryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlantWaitTime.aspx.cs">
+      <DependentUpon>PlantWaitTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlantWaitTime.aspx.designer.cs">
+      <DependentUpon>PlantWaitTime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlantWiseReport.aspx.cs">
+      <DependentUpon>PlantWiseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlantWiseReport.aspx.designer.cs">
+      <DependentUpon>PlantWiseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PlantWiseTripReport.aspx.cs">
+      <DependentUpon>PlantWiseTripReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PlantWiseTripReport.aspx.designer.cs">
+      <DependentUpon>PlantWiseTripReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrabhagWiseReport.aspx.cs">
+      <DependentUpon>PrabhagWiseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrabhagWiseReport.aspx.designer.cs">
+      <DependentUpon>PrabhagWiseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RampDashboard.aspx.cs">
+      <DependentUpon>RampDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RampDashboard.aspx.designer.cs">
+      <DependentUpon>RampDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RampDataEntry.aspx.cs">
+      <DependentUpon>RampDataEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RampDataEntry.aspx.designer.cs">
+      <DependentUpon>RampDataEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RampSummaryReport.aspx.cs">
+      <DependentUpon>RampSummaryReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RampSummaryReport.aspx.designer.cs">
+      <DependentUpon>RampSummaryReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RampWaitTime.aspx.cs">
+      <DependentUpon>RampWaitTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RampWaitTime.aspx.designer.cs">
+      <DependentUpon>RampWaitTime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RampWiseReport.aspx.cs">
+      <DependentUpon>RampWiseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RampWiseReport.aspx.designer.cs">
+      <DependentUpon>RampWiseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registernewdevice.aspx.cs">
+      <DependentUpon>registernewdevice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registernewdevice.aspx.designer.cs">
+      <DependentUpon>registernewdevice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RevokeForm.aspx.cs">
+      <DependentUpon>RevokeForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RevokeForm.aspx.designer.cs">
+      <DependentUpon>RevokeForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RevokeReport.aspx.cs">
+      <DependentUpon>RevokeReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RevokeReport.aspx.designer.cs">
+      <DependentUpon>RevokeReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RouteTypeAndFeederCreation.aspx.cs">
+      <DependentUpon>RouteTypeAndFeederCreation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RouteTypeAndFeederCreation.aspx.designer.cs">
+      <DependentUpon>RouteTypeAndFeederCreation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SweeperAttendance.aspx.cs">
+      <DependentUpon>SweeperAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SweeperAttendance.aspx.designer.cs">
+      <DependentUpon>SweeperAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SweeperAttendanceSummary.aspx.cs">
+      <DependentUpon>SweeperAttendanceSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SweeperAttendanceSummary.aspx.designer.cs">
+      <DependentUpon>SweeperAttendanceSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SweeperBeatCoverageReport.aspx.cs">
+      <DependentUpon>SweeperBeatCoverageReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SweeperBeatCoverageReport.aspx.designer.cs">
+      <DependentUpon>SweeperBeatCoverageReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SweeperDashboard.aspx.cs">
+      <DependentUpon>SweeperDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SweeperDashboard.aspx.designer.cs">
+      <DependentUpon>SweeperDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SweeperHistoryMap.aspx.cs">
+      <DependentUpon>SweeperHistoryMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SweeperHistoryMap.aspx.designer.cs">
+      <DependentUpon>SweeperHistoryMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SweeperHistoryMap_Mobile.aspx.cs">
+      <DependentUpon>SweeperHistoryMap_Mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SweeperHistoryMap_Mobile.aspx.designer.cs">
+      <DependentUpon>SweeperHistoryMap_Mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SWEEPERMaster.aspx.cs">
+      <DependentUpon>SWEEPERMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SWEEPERMaster.aspx.designer.cs">
+      <DependentUpon>SWEEPERMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SweeperRouteCoverage.aspx.cs">
+      <DependentUpon>SweeperRouteCoverage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SweeperRouteCoverage.aspx.designer.cs">
+      <DependentUpon>SweeperRouteCoverage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SwpeerManagement.aspx.cs">
+      <DependentUpon>SwpeerManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SwpeerManagement.aspx.designer.cs">
+      <DependentUpon>SwpeerManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tagregrestrationagdelhi_vehicles.aspx.cs">
+      <DependentUpon>Tagregrestrationagdelhi_vehicles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tagregrestrationagdelhi_vehicles.aspx.designer.cs">
+      <DependentUpon>Tagregrestrationagdelhi_vehicles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransationDataVehicles.aspx.cs">
+      <DependentUpon>TransationDataVehicles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransationDataVehicles.aspx.designer.cs">
+      <DependentUpon>TransationDataVehicles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tripreportcanddandspecialwaste.aspx.cs">
+      <DependentUpon>tripreportcanddandspecialwaste.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tripreportcanddandspecialwaste.aspx.designer.cs">
+      <DependentUpon>tripreportcanddandspecialwaste.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadReport.aspx.cs">
+      <DependentUpon>UploadReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadReport.aspx.designer.cs">
+      <DependentUpon>UploadReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleDashboard.aspx.cs">
+      <DependentUpon>VehicleDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VehicleDashboard.aspx.designer.cs">
+      <DependentUpon>VehicleDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleMap.aspx.cs">
+      <DependentUpon>VehicleMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VehicleMap.aspx.designer.cs">
+      <DependentUpon>VehicleMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleMapViewHistory.aspx.cs">
+      <DependentUpon>VehicleMapViewHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VehicleMapViewHistory.aspx.designer.cs">
+      <DependentUpon>VehicleMapViewHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleMapViewHistory1.aspx.cs">
+      <DependentUpon>VehicleMapViewHistory1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VehicleMapViewHistory1.aspx.designer.cs">
+      <DependentUpon>VehicleMapViewHistory1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleMapViewHistory2.aspx.cs">
+      <DependentUpon>VehicleMapViewHistory2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VehicleMapViewHistory2.aspx.designer.cs">
+      <DependentUpon>VehicleMapViewHistory2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VehiclesDashboard.aspx.cs">
+      <DependentUpon>VehiclesDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VehiclesDashboard.aspx.designer.cs">
+      <DependentUpon>VehiclesDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleStatusReport.aspx.cs">
+      <DependentUpon>VehicleStatusReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VehicleStatusReport.aspx.designer.cs">
+      <DependentUpon>VehicleStatusReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleTypeWiseReport.aspx.cs">
+      <DependentUpon>VehicleTypeWiseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VehicleTypeWiseReport.aspx.designer.cs">
+      <DependentUpon>VehicleTypeWiseReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleWiseTripsReport.aspx.cs">
+      <DependentUpon>VehicleWiseTripsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VehicleWiseTripsReport.aspx.designer.cs">
+      <DependentUpon>VehicleWiseTripsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleWiseWeightReport.aspx.cs">
+      <DependentUpon>VehicleWiseWeightReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VehicleWiseWeightReport.aspx.designer.cs">
+      <DependentUpon>VehicleWiseWeightReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewVehicleZoneWardKothi.aspx.cs">
+      <DependentUpon>ViewVehicleZoneWardKothi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewVehicleZoneWardKothi.aspx.designer.cs">
+      <DependentUpon>ViewVehicleZoneWardKothi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm4.aspx.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm4.aspx.designer.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="FineCollection\" />
+    <Folder Include="HttpContext\Current\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57324</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57324/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
