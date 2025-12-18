@@ -491,40 +491,80 @@
                             var values = [];
                             var colors = [];
 
-                            var overallTotal = apiData.innerRing.values.reduce((a, b) => a + b, 0);
+                            // 1. CLEAN DATA: Filter out empty block labels to ensure math consistency
+                            var cleanInnerLabels = [];
+                            var cleanInnerValues = [];
+                            apiData.innerRing.labels.forEach((label, i) => {
+                                if (label && label.trim() !== "") {
+                                    cleanInnerLabels.push(label);
+                                    cleanInnerValues.push(apiData.innerRing.values[i]);
+                                }
+                            });
 
-                            // ROOT
-                            labels.push("Overall"); parents.push(""); values.push(overallTotal); colors.push("#42A5F5");
+                            // Calculate total based only on visible blocks
+                            var overallTotal = cleanInnerValues.reduce((a, b) => a + b, 0);
 
-                            // BLOCK LEVEL (INNER RING)
-                            apiData.innerRing.labels.forEach(function (block, i) {
-                                if (!block || block.trim() === "") return;
-                                labels.push(block); parents.push("Overall");
-                                values.push(apiData.innerRing.values[i]);
+                            // 2. ROOT NODE
+                            labels.push("Overall");
+                            parents.push("");
+                            values.push(overallTotal);
+                            colors.push("#42A5F5");
+
+                            // 3. BLOCK LEVEL (INNER RING)
+                            cleanInnerLabels.forEach(function (block, i) {
+                                labels.push(block);
+                                parents.push("Overall");
+                                values.push(cleanInnerValues[i]);
                                 colors.push(blockColors[block] || "#BDBDBD");
                             });
 
-                            // STATUS LEVEL (OUTER RING) - Example logic kept from your snippet
+                            // 4. STATUS LEVEL (OUTER RING)
                             var statusTotals = {};
-                            apiData.outerRing.labels.forEach(function (s, i) { statusTotals[s] = apiData.outerRing.values[i]; });
+                            apiData.outerRing.labels.forEach(function (s, i) {
+                                statusTotals[s] = apiData.outerRing.values[i];
+                            });
 
-                            apiData.innerRing.labels.forEach(function (block, i) {
-                                if (!block || block.trim() === "") return;
-                                var blockTotal = apiData.innerRing.values[i];
+                            // Calculate total sum of status values to get weights
+                            var totalStatusSum = apiData.outerRing.values.reduce((a, b) => a + b, 0);
 
-                                apiData.outerRing.labels.forEach(function (status) {
-                                    var proportionalValue = (statusTotals[status] / overallTotal) * blockTotal;
-                                    labels.push(status); parents.push(block);
-                                    values.push(Math.round(proportionalValue));
+                            cleanInnerLabels.forEach(function (block, i) {
+                                var blockTotal = cleanInnerValues[i];
+                                var runningSumForBlock = 0;
+
+                                apiData.outerRing.labels.forEach(function (status, j) {
+                                    var finalVal;
+
+                                    // Logic: If it's the last status item, use subtraction to avoid rounding errors
+                                    if (j === apiData.outerRing.labels.length - 1) {
+                                        finalVal = blockTotal - runningSumForBlock;
+                                    } else {
+                                        // Calculate weight based on the status's global share
+                                        var weight = statusTotals[status] / totalStatusSum;
+                                        finalVal = Math.round(weight * blockTotal);
+                                        runningSumForBlock += finalVal;
+                                    }
+
+                                    labels.push(status + " (" + block + ")");
+                                    parents.push(block);
+                                    values.push(finalVal);
                                     colors.push(statusColors[status] || "#CCCCCC");
                                 });
                             });
 
+                            // 5. PLOTLY CONFIGURATION
                             var data = [{
                                 type: "sunburst",
-                                labels: labels, parents: parents, values: values, branchvalues: "total",
-                                marker: { colors: colors, line: { color: "#fff", width: 1 } },
-                                textinfo: "label+percent parent", insidetextorientation: "radial"
+                                labels: labels,
+                                parents: parents,
+                                values: values,
+                                branchvalues: "total",
+                                marker: {
+                                    colors: colors,
+                                    line: { color: "#000", width: 1 }
+                                },
+                                textinfo: "label+percent parent",
+                                insidetextorientation: "radial",
+                                hoverinfo: "label+value+percent entry"
                             }];
 
                             var layout = getBaseLayout("Overall Coverage");
